@@ -1,0 +1,111 @@
+import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
+import type { HeroSlideContent } from '../../lib/types'
+import { Button } from '../ui/button'
+import { cn } from '../../lib/utils'
+
+interface HeroSlideProps {
+  content: HeroSlideContent
+  className?: string
+  onNext?: () => void
+}
+
+export function HeroSlide({ content, className, onNext }: HeroSlideProps) {
+  return (
+    <div
+      className={cn(
+        'relative min-h-screen flex items-center justify-center',
+        className
+      )}
+    >
+      {/* Dynamic gradient background with animation */}
+      <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-blue-900 to-indigo-900">
+        <div className="absolute inset-0 bg-linear-to-br from-blue-600/20 via-transparent to-purple-600/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.15),transparent_50%)]" />
+      </div>
+
+      {/* Animated particles/dots */}
+      <div className="absolute inset-0">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.3, 0.8, 0.3],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-8 text-center text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="mb-8"
+          >
+            <div className="text-6xl md:text-8xl font-black tracking-tight mb-4">
+              <span className="bg-linear-to-br from-blue-400 via-cyan-400 to-blue-300 bg-clip-text text-transparent">
+                Meet FLO
+              </span>
+            </div>
+
+            {content.subtitle && (
+              <div className="text-2xl md:text-4xl font-light text-blue-100 mb-8 tracking-wide">
+                {content.subtitle}
+              </div>
+            )}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12 font-light"
+          >
+            {content.description}
+          </motion.div>
+
+          {content.ctaText && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              <Button
+                size="lg"
+                className="text-lg px-12 py-6 h-auto bg-linear-to-br from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 font-semibold"
+                onClick={() => {
+                  if (onNext) {
+                    onNext()
+                  } else if (content.ctaLink?.startsWith('#')) {
+                    const element = document.querySelector(content.ctaLink)
+                    element?.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+              >
+                {content.ctaText}
+                <ArrowRight className="ml-3 h-6 w-6" />
+              </Button>
+            </motion.div>
+          )}
+        </motion.div>
+      </div>
+    </div>
+  )
+}

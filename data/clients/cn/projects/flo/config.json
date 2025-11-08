@@ -1,0 +1,17 @@
+{
+  "id": "flo",
+  "clientId": "cn",
+  "name": "FLO — Intelligent Communication Assistant",
+  "description": "Revolutionary AI-powered platform that prioritizes communications and drafts high-quality replies in seconds",
+  "status": "active",
+  "createdAt": "2025-11-01T00:00:00Z",
+  "updatedAt": "2025-11-08T00:00:00Z",
+  "tags": [
+    "AI",
+    "Communication",
+    "Productivity",
+    "Gmail",
+    "Prioritization",
+    "Drafting"
+  ]
+}
