@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
 import type { TimelineSlideContent } from '../../lib/types'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
-import { Badge } from '../ui/badge'
 import { cn } from '../../lib/utils'
 
 interface TimelineSlideProps {

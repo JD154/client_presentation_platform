@@ -22,12 +22,6 @@ const iconMap = {
   'check-circle': CheckCircle,
 }
 
-const statusColors = {
-  implemented: 'text-green-600 bg-green-100',
-  planned: 'text-blue-600 bg-blue-100',
-  ongoing: 'text-orange-600 bg-orange-100',
-}
-
 const statusIcons = {
   implemented: CheckCircle,
   planned: Clock,

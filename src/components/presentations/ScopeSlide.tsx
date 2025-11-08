@@ -6,12 +6,6 @@ interface Props {
   content: ScopeSlideContent
 }
 
-const priorityColors = {
-  must: 'border-green-200 bg-green-50',
-  should: 'border-blue-200 bg-blue-50',
-  could: 'border-purple-200 bg-purple-50',
-}
-
 const priorityIcons = {
   must: CheckCircle,
   should: Clock,

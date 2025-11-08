@@ -11,7 +11,6 @@ import {
   BarChart,
 } from 'lucide-react'
 import type { ArchitectureSlideContent } from '../../lib/types'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { cn } from '../../lib/utils'
 
 interface ArchitectureSlideProps {
