@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import {
-  Mail,
-  Brain,
-  Folder,
-  MessageSquare,
-  Link,
-  Database,
-  Lock,
-  Zap,
   BarChart,
+  Brain,
+  Database,
+  Folder,
+  Link,
+  Lock,
+  Mail,
+  MessageSquare,
+  Zap,
 } from 'lucide-react'
 import type { ArchitectureSlideContent } from '../../lib/types'
 import { cn } from '../../lib/utils'
@@ -59,7 +59,7 @@ export function ArchitectureSlide({
       )}
     >
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
 
       <motion.div
@@ -132,7 +132,7 @@ export function ArchitectureSlide({
       </motion.div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>
   )
 }

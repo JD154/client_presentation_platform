@@ -41,7 +41,7 @@ export function MetricsSlide({ content, title, className }: MetricsSlideProps) {
       )}
     >
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -82,7 +82,7 @@ export function MetricsSlide({ content, title, className }: MetricsSlideProps) {
                   )}
 
                   <motion.div
-                    className="text-5xl font-black text-white mb-4 bg-linear-to-br from-blue-300 to-cyan-300 bg-clip-text text-transparent"
+                    className="text-5xl font-black text-white mb-4 bg-linear-to-br from-blue-300 to-cyan-300 bg-clip-text"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
@@ -107,7 +107,7 @@ export function MetricsSlide({ content, title, className }: MetricsSlideProps) {
       </motion.div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>
   )
 }
