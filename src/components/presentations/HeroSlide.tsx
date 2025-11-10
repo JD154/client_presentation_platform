@@ -11,7 +11,8 @@ interface HeroSlideProps {
 // Hardcoded content for FLO project hero
 const heroContent = {
   subtitle: 'The Future of Intelligent Communication',
-  description: 'FLO delivers immediate, compounding value by prioritizing critical communications and drafting high-quality replies in seconds. Transform your inbox from chaos to clarity with AI that understands what matters most.',
+  description:
+    'FLO delivers immediate, compounding value by prioritizing critical communications and drafting high-quality replies in seconds. Transform your inbox from chaos to clarity with AI that understands what matters most.',
   backgroundImage: '/api/placeholder/1920/1080',
   ctaText: 'Discover The Vision',
   ctaLink: '#value-proposition',

@@ -21,31 +21,36 @@ const architectureContent = {
   components: [
     {
       name: 'Inbound Adapter *',
-      description: 'Secure OAuth with incremental pull, dedupe, MIME parse, backoff strategies',
+      description:
+        'Secure OAuth with incremental pull, dedupe, MIME parse, backoff strategies',
       icon: 'mail',
       connections: ['prioritizer', 'drafts'],
     },
     {
       name: 'Prioritizer Engine',
-      description: 'Rules + lightweight model with explanations, user feedback integration',
+      description:
+        'Rules + lightweight model with explanations, user feedback integration',
       icon: 'brain',
       connections: ['store', 'telemetry'],
     },
     {
       name: 'Assisted Drafts Service',
-      description: 'Prompt orchestration, guardrails, citation, human-in-the-loop validation',
+      description:
+        'Prompt orchestration, guardrails, citation, human-in-the-loop validation',
       icon: 'message-square',
       connections: ['store', 'auth'],
     },
     {
       name: 'Auth & Security Layer',
-      description: 'OIDC/OAuth, minimal scopes, encrypted PII, least privilege access',
+      description:
+        'OIDC/OAuth, minimal scopes, encrypted PII, least privilege access',
       icon: 'lock',
       connections: ['all-services'],
     },
     {
       name: 'Postgres + pgvector',
-      description: 'Secure data store with vector search, multi-tenant isolation',
+      description:
+        'Secure data store with vector search, multi-tenant isolation',
       icon: 'database',
       connections: ['knowledge-base'],
     },
@@ -68,7 +73,8 @@ const architectureContent = {
       connections: ['processing'],
     },
   ],
-  extraDescription: '*The Inbound Adapter includes the Gmail Adapter, which provides secure integration with Gmail using OAuth, performs incremental email extraction, deduplication, MIME parsing, and backoff strategies for robustness and efficiency.',
+  extraDescription:
+    '*The Inbound Adapter includes the Gmail Adapter, which provides secure integration with Gmail using OAuth, performs incremental email extraction, deduplication, MIME parsing, and backoff strategies for robustness and efficiency.',
 }
 
 const iconMap = {

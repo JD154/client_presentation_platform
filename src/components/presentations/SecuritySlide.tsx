@@ -21,7 +21,7 @@ const statusIcons = {
   planned: Clock,
   ongoing: AlertTriangle,
   'To be planned': Clock,
-  'Scoped': CheckCircle,
+  Scoped: CheckCircle,
 }
 
 // Hardcoded content for FLO project security
@@ -29,7 +29,8 @@ const securityContent = {
   principles: [
     {
       title: 'Minimal Scopes & Least Privilege',
-      description: 'OAuth with minimal required scopes, role-based access controls, and principle of least privilege throughout',
+      description:
+        'OAuth with minimal required scopes, role-based access controls, and principle of least privilege throughout',
       icon: 'key',
       implementation: [
         'Gmail API minimal read/write scopes only',
@@ -40,7 +41,8 @@ const securityContent = {
     },
     {
       title: 'Encryption Everywhere',
-      description: 'PII encrypted at rest and in transit, secure token handling, and data minimization practices',
+      description:
+        'PII encrypted at rest and in transit, secure token handling, and data minimization practices',
       icon: 'lock',
       implementation: [
         'AES-256 encryption for data at rest',
@@ -51,7 +53,8 @@ const securityContent = {
     },
     {
       title: 'Privacy by Design',
-      description: 'PII minimization, data retention policies, and user control over personal information',
+      description:
+        'PII minimization, data retention policies, and user control over personal information',
       icon: 'shield',
       implementation: [
         'Minimal PII collection and storage',
@@ -62,7 +65,8 @@ const securityContent = {
     },
     {
       title: 'Zero Trust Architecture',
-      description: 'No implicit trust, continuous verification, and comprehensive monitoring of all components',
+      description:
+        'No implicit trust, continuous verification, and comprehensive monitoring of all components',
       icon: 'eye',
       implementation: [
         'Continuous authentication validation',
@@ -75,7 +79,8 @@ const securityContent = {
   compliance: [
     {
       standard: 'OAuth 2.0 / OIDC',
-      description: 'Industry standard authentication with secure token handling',
+      description:
+        'Industry standard authentication with secure token handling',
       status: 'Scoped' as const,
     },
     {

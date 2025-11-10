@@ -12,7 +12,8 @@ const timelineContent = {
     {
       title: 'Sprint 1-2: Foundation & Core Auth (Dec 1 - Dec 28)',
       duration: '4 weeks',
-      description: 'Infrastructure setup, Google OAuth, and Priority Inbox foundation with complete ingestion pipeline',
+      description:
+        'Infrastructure setup, Google OAuth, and Priority Inbox foundation with complete ingestion pipeline',
       deliverables: [
         'Functional login with OAuth/OIDC security',
         'Gmail ingestion with deduplication and MIME parsing',
@@ -24,7 +25,8 @@ const timelineContent = {
     {
       title: 'Sprint 3-4: Intelligence & Assisted Drafts (Dec 29 - Jan 25)',
       duration: '4 weeks',
-      description: 'AI-powered prioritization with explanations and assisted draft generation with guardrails',
+      description:
+        'AI-powered prioritization with explanations and assisted draft generation with guardrails',
       deliverables: [
         'Stable prioritizer with consistent rankings',
         'First assisted drafts with thread grounding',
@@ -36,7 +38,8 @@ const timelineContent = {
     {
       title: 'Sprint 5-6: Performance & Production (Jan 26 - Feb 22)',
       duration: '4 weeks',
-      description: 'Telemetry implementation, performance optimization, and production hardening for scale',
+      description:
+        'Telemetry implementation, performance optimization, and production hardening for scale',
       deliverables: [
         'Live feedback loops and user telemetry',
         'Performance targets achieved (≤3s P50)',

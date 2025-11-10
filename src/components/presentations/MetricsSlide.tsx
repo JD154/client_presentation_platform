@@ -20,25 +20,29 @@ const metricsContent = {
     {
       value: '50%',
       label: 'Time Savings',
-      description: 'Reduce average response time to priority emails within 2 weeks',
+      description:
+        'Reduce average response time to priority emails within 2 weeks',
       icon: 'clock',
     },
     {
       value: '≥30%',
       label: 'Auto-Triage Coverage',
-      description: 'Automated classification with high perceived precision and feedback loops',
+      description:
+        'Automated classification with high perceived precision and feedback loops',
       icon: 'target',
     },
     {
       value: '≤3s',
       label: 'Lightning Speed',
-      description: 'First draft generation in seconds with thread context understanding',
+      description:
+        'First draft generation in seconds with thread context understanding',
       icon: 'zap',
     },
     {
       value: '100%',
       label: 'Security First',
-      description: 'Zero P0 incidents with OAuth/OIDC and encrypted data handling',
+      description:
+        'Zero P0 incidents with OAuth/OIDC and encrypted data handling',
       icon: 'trending-up',
     },
   ],

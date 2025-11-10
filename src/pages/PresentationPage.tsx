@@ -45,75 +45,34 @@ export function PresentationPage() {
   const renderSlide = (slide: Slide, goToNext?: () => void) => {
     switch (slide.type) {
       case 'hero':
-        return (
-          <HeroSlide
-            key={slide.id}
-            onNext={goToNext}
-          />
-        )
+        return <HeroSlide key={slide.id} onNext={goToNext} />
 
       case 'value-proposition':
-        return (
-          <ValuePropositionSlide
-            key={slide.id}
-          />
-        )
+        return <ValuePropositionSlide key={slide.id} />
 
       case 'metrics':
-        return (
-          <MetricsSlide
-            key={slide.id}
-          />
-        )
+        return <MetricsSlide key={slide.id} />
 
       case 'scope':
-        return (
-          <ScopeSlide
-            key={slide.id}
-          />
-        )
+        return <ScopeSlide key={slide.id} />
 
       case 'timeline':
-        return (
-          <TimelineSlide
-            key={slide.id}
-          />
-        )
+        return <TimelineSlide key={slide.id} />
 
       case 'architecture':
-        return (
-          <ArchitectureSlide
-            key={slide.id}
-          />
-        )
+        return <ArchitectureSlide key={slide.id} />
 
       case 'team':
-        return (
-          <TeamSlide
-            key={slide.id}
-          />
-        )
+        return <TeamSlide key={slide.id} />
 
       case 'security':
-        return (
-          <SecuritySlide
-            key={slide.id}
-          />
-        )
+        return <SecuritySlide key={slide.id} />
 
       case 'future-expansion':
-        return (
-          <FutureExpansionSlide
-            key={slide.id}
-          />
-        )
+        return <FutureExpansionSlide key={slide.id} />
 
       case 'cta':
-        return (
-          <CTASlide
-            key={slide.id}
-          />
-        )
+        return <CTASlide key={slide.id} />
 
       default:
         return (

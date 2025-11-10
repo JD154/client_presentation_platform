@@ -18,7 +18,8 @@ const roleIcons = {
 
 // Hardcoded content for FLO project team
 const teamContent = {
-  methodology: 'Concurrent workstreams with 2-week sprints to minimize time-to-value while reducing risk',
+  methodology:
+    'Concurrent workstreams with 2-week sprints to minimize time-to-value while reducing risk',
   team: [
     {
       role: 'DevOps',
@@ -66,19 +67,23 @@ const teamContent = {
   collaboration: [
     {
       aspect: 'Ownership Model (CN Aligned)',
-      description: 'CN owns domain models, business logic, and UI decisions. UKLOK provides reusable infrastructure patterns and knowledge systems.',
+      description:
+        'CN owns domain models, business logic, and UI decisions. UKLOK provides reusable infrastructure patterns and knowledge systems.',
     },
     {
       aspect: 'Communication Cadence',
-      description: 'Weekly demos, telemetry reviews, backlog refinement. Ad-hoc product syncs as needed for rapid iteration.',
+      description:
+        'Weekly demos, telemetry reviews, backlog refinement. Ad-hoc product syncs as needed for rapid iteration.',
     },
     {
       aspect: 'Deliverables Per Sprint',
-      description: 'Running build in staging, demoable flows, technical documentation, rollback plans for safe deployment.',
+      description:
+        'Running build in staging, demoable flows, technical documentation, rollback plans for safe deployment.',
     },
     {
       aspect: 'Quality Gates',
-      description: 'DoR/DoD validation, performance benchmarks, security reviews, user acceptance testing before each release.',
+      description:
+        'DoR/DoD validation, performance benchmarks, security reviews, user acceptance testing before each release.',
     },
   ],
 }

@@ -22,29 +22,34 @@ const iconMap = {
 
 // Hardcoded content for FLO project value proposition
 const valuePropositionContent = {
-  mainValue: 'FLO is an input-centric platform designed to connect multiple sources into a single prioritization and drafting engine, starting with Gmail for speed and safety.',
+  mainValue:
+    'FLO is an input-centric platform designed to connect multiple sources into a single prioritization and drafting engine, starting with Gmail for speed and safety.',
   benefits: [
     {
       title: 'Time Savings',
-      description: 'Reduce average response time to priority emails by 50% within 2 weeks',
+      description:
+        'Reduce average response time to priority emails by 50% within 2 weeks',
       icon: 'clock',
       metric: '50%',
     },
     {
       title: 'Auto-Triage Coverage',
-      description: 'Automated classification with high perceived precision and feedback loops',
+      description:
+        'Automated classification with high perceived precision and feedback loops',
       icon: 'target',
       metric: '≥30%',
     },
     {
       title: 'Lightning Speed',
-      description: 'First draft generation in seconds with thread context understanding',
+      description:
+        'First draft generation in seconds with thread context understanding',
       icon: 'zap',
       metric: '≤3s',
     },
     {
       title: 'Security First',
-      description: 'Zero P0 incidents with OAuth/OIDC and encrypted data handling',
+      description:
+        'Zero P0 incidents with OAuth/OIDC and encrypted data handling',
       icon: 'shield',
       metric: '100%',
     },
