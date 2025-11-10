@@ -48,18 +48,17 @@ const floPresentation: Presentation = {
       title: 'Service-Agnostic & Extensible Architecture',
       animation: 'slide-in-up',
     },
-
-    {
-      id: 'security',
-      type: 'security',
-      title: 'Security & Compliance Framework',
-      animation: 'slide-in-up',
-    },
     {
       id: 'future-expansion',
       type: 'future-expansion',
       title: 'Future Possibilities After V1',
       animation: 'slide-in-right',
+    },
+    {
+      id: 'security',
+      type: 'security',
+      title: 'Security & Compliance Framework',
+      animation: 'slide-in-up',
     },
     {
       id: 'cta',

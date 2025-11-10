@@ -30,6 +30,42 @@ const futureExpansionContent = {
     'One intelligent interface for all communication channels, learning your style and handling routine tasks automatically',
   expansions: [
     {
+      category: 'Automation & Workflow',
+      title: 'Rules and Automations',
+      description:
+        'Personal and team workflows to triage, route, label, and assign - no-code where possible',
+      impact: 'medium' as const,
+      effort: 'medium' as const,
+      icon: 'settings',
+    },
+    {
+      category: 'Automation & Workflow',
+      title: 'Assisted Replies Everywhere',
+      description:
+        'Draft, refine, and send with your voice and tone across all channels with reusable templates',
+      impact: 'high' as const,
+      effort: 'medium' as const,
+      icon: 'message-square',
+    },
+    {
+      category: 'Multi-Channel Integration',
+      title: 'Cross-Channel Prioritization',
+      description:
+        'Unified view that surfaces what truly needs attention, regardless of source platform',
+      impact: 'high' as const,
+      effort: 'medium' as const,
+      icon: 'zap',
+    },
+    {
+      category: 'Multi-Channel Integration',
+      title: 'Omnichannel Expansion',
+      description:
+        'Connect Slack, Microsoft Teams, WhatsApp, Telegram - one intelligent inbox for everything',
+      impact: 'high' as const,
+      effort: 'low' as const,
+      icon: 'message-square',
+    },
+    {
       category: 'AI & Intelligence',
       title: 'Knowledge-Grounded Answers',
       description:
@@ -56,24 +92,7 @@ const futureExpansionContent = {
       effort: 'low' as const,
       icon: 'bar-chart',
     },
-    {
-      category: 'Automation & Workflow',
-      title: 'Rules and Automations',
-      description:
-        'Personal and team workflows to triage, route, label, and assign - no-code where possible',
-      impact: 'medium' as const,
-      effort: 'medium' as const,
-      icon: 'settings',
-    },
-    {
-      category: 'Automation & Workflow',
-      title: 'Assisted Replies Everywhere',
-      description:
-        'Draft, refine, and send with your voice and tone across all channels with reusable templates',
-      impact: 'high' as const,
-      effort: 'medium' as const,
-      icon: 'message-square',
-    },
+
     {
       category: 'Enterprise & Scale',
       title: 'Controls and Compliance',
@@ -100,24 +119,6 @@ const futureExpansionContent = {
       impact: 'high' as const,
       effort: 'high' as const,
       icon: 'smartphone',
-    },
-    {
-      category: 'Multi-Channel Integration',
-      title: 'Cross-Channel Prioritization',
-      description:
-        'Unified view that surfaces what truly needs attention, regardless of source platform',
-      impact: 'high' as const,
-      effort: 'medium' as const,
-      icon: 'zap',
-    },
-    {
-      category: 'Multi-Channel Integration',
-      title: 'Omnichannel Expansion',
-      description:
-        'Connect Slack, Microsoft Teams, WhatsApp, Telegram - one intelligent inbox for everything',
-      impact: 'high' as const,
-      effort: 'low' as const,
-      icon: 'message-square',
     },
   ],
 }
@@ -166,14 +167,14 @@ export function FutureExpansionSlide() {
             // Reorder categories for better visual balance
             const categoryEntries = Object.entries(categories)
             const reorderedCategories = [
-              categoryEntries.find(([name]) => name === 'Enterprise & Scale'),
-              categoryEntries.find(([name]) => name === 'AI & Intelligence'),
               categoryEntries.find(
                 ([name]) => name === 'Multi-Channel Integration'
               ),
               categoryEntries.find(
                 ([name]) => name === 'Automation & Workflow'
               ),
+              categoryEntries.find(([name]) => name === 'Enterprise & Scale'),
+              categoryEntries.find(([name]) => name === 'AI & Intelligence'),
             ].filter(Boolean) as [string, typeof content.expansions][]
 
             return reorderedCategories.map(

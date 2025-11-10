@@ -28,9 +28,9 @@ const valuePropositionContent = {
     {
       title: 'Time Savings',
       description:
-        'Reduce average response time to priority emails by 50% within 2 weeks',
+        'Reduce average response time to priority emails by ±50% within 2 weeks',
       icon: 'clock',
-      metric: '50%',
+      metric: '±50%',
     },
     {
       title: 'Auto-Triage Coverage',
@@ -76,11 +76,6 @@ const valuePropositionContent = {
       icon: 'users',
     },
     {
-      label: 'Auto-Triage Precision',
-      description: 'Perceived precision with thumbs up/down feedback loop',
-      icon: 'target',
-    },
-    {
       label: 'Draft Generation Speed',
       description: 'P50 / ≤7s P95 for threads ≤10 messages',
       icon: 'zap',
@@ -114,64 +109,76 @@ export function ValuePropositionSlide() {
       </div>
 
       {/* Benefits Grid */}
-      <div className="relative z-10 grid gap-8 mb-12 md:grid-cols-2 lg:grid-cols-4">
-        {content.benefits.map((benefit, index) => {
-          const IconComponent = benefit.icon
-            ? iconMap[benefit.icon as keyof typeof iconMap]
-            : Lightbulb
-
-          return (
-            <div
-              key={index}
-              className="p-6 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-white/20 rounded-xl hover:bg-white/15 hover:scale-105 hover:shadow-2xl group"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center justify-center w-16 h-16 transition-all duration-300 rounded-full bg-linear-to-br from-blue-400 to-cyan-400 group-hover:from-blue-300 group-hover:to-cyan-300">
-                  <IconComponent className="w-8 h-8 text-white" />
-                </div>
-                {benefit.metric && (
-                  <div className="text-3xl font-black text-transparent bg-linear-to-br from-blue-300 to-cyan-300 bg-clip-text">
-                    {benefit.metric}
-                  </div>
-                )}
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-white">
-                {benefit.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-300">
-                {benefit.description}
-              </p>
-            </div>
-          )
-        })}
-      </div>
-
-      {/* Business Outcomes */}
-      <div className="relative z-10 p-8 border bg-white/5 backdrop-blur-lg border-white/10 rounded-2xl">
-        <h2 className="mb-6 text-2xl font-bold text-center text-white"></h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {content.outcomes.map((outcome, index) => {
-            const IconComponent = outcome.icon
-              ? iconMap[outcome.icon as keyof typeof iconMap]
-              : CheckCircle
+      <div className="relative z-10 mb-12">
+        <h2 className="mb-8 text-2xl font-bold text-left text-white">
+          Key Performance Indicators
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {content.benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon
+              ? iconMap[benefit.icon as keyof typeof iconMap]
+              : Lightbulb
 
             return (
-              <div key={index} className="flex items-start">
-                <div className="p-2 mt-1 mr-3 rounded-lg bg-linear-to-br from-green-400 to-emerald-400 shrink-0">
-                  <IconComponent className="w-5 h-5 text-white" />
+              <div
+                key={index}
+                className="p-6 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-white/20 rounded-xl hover:bg-white/15 hover:scale-105 hover:shadow-2xl group"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 transition-all duration-300 rounded-full bg-linear-to-br from-blue-400 to-cyan-400 group-hover:from-blue-300 group-hover:to-cyan-300">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  {benefit.metric && (
+                    <div className="text-3xl font-black text-transparent bg-linear-to-br from-blue-300 to-cyan-300 bg-clip-text">
+                      {benefit.metric}
+                    </div>
+                  )}
                 </div>
-                <div>
-                  <h4 className="mb-1 font-semibold text-white">
-                    {outcome.label}
-                  </h4>
-                  <p className="text-sm text-gray-300">{outcome.description}</p>
-                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">
+                  {benefit.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-300">
+                  {benefit.description}
+                </p>
               </div>
             )
           })}
         </div>
       </div>
 
+      {
+        /* Business Outcomes */
+        <div>
+          <h2 className="mb-6 text-2xl font-bold text-left text-white">
+            Expected Business Outcomes
+          </h2>
+          <div className="relative z-10 p-8 border bg-white/5 backdrop-blur-lg border-white/10 rounded-2xl">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {content.outcomes.map((outcome, index) => {
+                const IconComponent = outcome.icon
+                  ? iconMap[outcome.icon as keyof typeof iconMap]
+                  : CheckCircle
+
+                return (
+                  <div key={index} className="flex items-start">
+                    <div className="p-2 mt-1 mr-3 rounded-lg bg-linear-to-br from-green-400 to-emerald-400 shrink-0">
+                      <IconComponent className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="mb-1 font-semibold text-white">
+                        {outcome.label}
+                      </h4>
+                      <p className="text-sm text-gray-300">
+                        {outcome.description}
+                      </p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </div>
+      }
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>

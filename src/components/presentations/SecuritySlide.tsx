@@ -33,7 +33,7 @@ const securityContent = {
         'OAuth with minimal required scopes, role-based access controls, and principle of least privilege throughout',
       icon: 'key',
       implementation: [
-        'Gmail API minimal read/write scopes only',
+        'Communication API with high adaptability for new services',
         'Role-based access control (RBAC) implementation',
         'Token rotation and expiration policies',
         'Audit trails for all access patterns',
@@ -115,30 +115,30 @@ export function SecuritySlide() {
   const title = 'Security & Compliance Framework'
   const content = securityContent
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-900 via-slate-800 to-blue-900 p-12 flex flex-col relative">
+    <div className="relative flex flex-col min-h-screen p-12 bg-linear-to-br from-gray-900 via-slate-800 to-blue-900">
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
 
       {/* Header */}
-      <div className="text-center mb-10 relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <div className="relative z-10 mb-10 text-center">
+        <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl">
           {title}
         </h1>
-        <div className="w-32 h-1 bg-linear-to-br from-blue-400 to-cyan-400 mx-auto rounded-full mb-6" />
-        <p className="text-xl text-gray-300 font-medium max-w-4xl mx-auto mb-6">
+        <div className="w-32 h-1 mx-auto mb-6 rounded-full bg-linear-to-br from-blue-400 to-cyan-400" />
+        <p className="max-w-4xl mx-auto mb-6 text-xl font-medium text-gray-300">
           Enterprise-grade security with privacy-by-design and zero-trust
           principles
         </p>
       </div>
 
       {/* Security Principles */}
-      <div className="mb-10 relative z-10">
-        <h2 className="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
-          <div className="w-2 h-2 bg-linear-to-br from-red-400 to-orange-400 rounded-full mr-3" />
+      <div className="relative z-10 mb-10">
+        <h2 className="flex items-center justify-center mb-6 text-2xl font-bold text-center text-white">
+          <div className="w-2 h-2 mr-3 rounded-full bg-linear-to-br from-red-400 to-orange-400" />
           Security Architecture Principles
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {content.principles.map((principle, index) => {
             const IconComponent = principle.icon
               ? iconMap[principle.icon as keyof typeof iconMap]
@@ -150,31 +150,31 @@ export function SecuritySlide() {
                 className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-[1.02] group"
               >
                 <div className="flex items-start mb-4">
-                  <div className="w-16 h-16 bg-linear-to-br from-red-400 to-orange-400 rounded-lg mr-4 shrink-0 flex items-center justify-center group-hover:from-red-300 group-hover:to-orange-300 transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 mr-4 transition-all duration-300 rounded-lg bg-linear-to-br from-red-400 to-orange-400 shrink-0 group-hover:from-red-300 group-hover:to-orange-300">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <h3 className="mb-2 text-lg font-semibold text-white">
                       {principle.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">
+                    <p className="mb-4 leading-relaxed text-gray-300">
                       {principle.description}
                     </p>
                   </div>
                 </div>
 
-                <div className="border-t border-white/20 pt-4">
-                  <h4 className="text-sm font-semibold text-blue-300 mb-3 flex items-center">
-                    <div className="w-1 h-1 bg-linear-to-br from-green-400 to-emerald-400 rounded-full mr-2" />
+                <div className="pt-4 border-t border-white/20">
+                  <h4 className="flex items-center mb-3 text-sm font-semibold text-blue-300">
+                    <div className="w-1 h-1 mr-2 rounded-full bg-linear-to-br from-green-400 to-emerald-400" />
                     Implementation:
                   </h4>
                   <ul className="space-y-2">
                     {principle.implementation.map((item, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start text-sm text-gray-300 bg-white/5 rounded-lg p-2 hover:bg-white/10 transition-colors duration-200"
+                        className="flex items-start p-2 text-sm text-gray-300 transition-colors duration-200 rounded-lg bg-white/5 hover:bg-white/10"
                       >
-                        <div className="w-1 h-1 bg-green-400 rounded-full mt-2 mr-3 shrink-0"></div>
+                        <div className="w-1 h-1 mt-2 mr-3 bg-green-400 rounded-full shrink-0"></div>
                         {item}
                       </li>
                     ))}
@@ -187,13 +187,13 @@ export function SecuritySlide() {
       </div>
 
       {/* Compliance Standards */}
-      <div className="flex-1 relative z-10">
-        <h2 className="text-2xl font-bold text-white mb-6 text-center flex items-center justify-center">
-          <div className="w-2 h-2 bg-linear-to-br from-blue-400 to-cyan-400 rounded-full mr-3" />
+      <div className="relative z-10 flex-1">
+        <h2 className="flex items-center justify-center mb-6 text-2xl font-bold text-center text-white">
+          <div className="w-2 h-2 mr-3 rounded-full bg-linear-to-br from-blue-400 to-cyan-400" />
           Compliance & Standards
         </h2>
-        <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 relative z-10">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="relative z-10 p-8 border bg-white/5 backdrop-blur-lg border-white/10 rounded-2xl">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {content.compliance.map((item, index) => {
               const StatusIcon = statusIcons[item.status]
 
@@ -203,15 +203,15 @@ export function SecuritySlide() {
                   className="border border-white/10 bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-all duration-200 hover:scale-[1.02]"
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-semibold text-white text-sm">
+                    <h3 className="text-sm font-semibold text-white">
                       {item.standard}
                     </h3>
-                    <div className="flex items-center px-3 py-1 rounded-full text-xs font-medium text-blue-300 bg-blue-500/20 border border-blue-400/30">
+                    <div className="flex items-center px-3 py-1 text-xs font-medium text-blue-300 border rounded-full bg-blue-500/20 border-blue-400/30">
                       <StatusIcon className="w-3 h-3 mr-1" />
                       {item.status}
                     </div>
                   </div>
-                  <p className="text-xs text-gray-300 leading-relaxed">
+                  <p className="text-xs leading-relaxed text-gray-300">
                     {item.description}
                   </p>
                 </div>
@@ -222,34 +222,34 @@ export function SecuritySlide() {
       </div>
 
       {/* Security Guarantees */}
-      <div className="mt-8 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 text-white relative z-10">
-        <div className="text-center mb-6">
-          <h3 className="text-2xl font-bold mb-2 text-white flex items-center justify-center">
-            <div className="w-2 h-2 bg-linear-to-br from-green-400 to-emerald-400 rounded-full mr-3" />
+      <div className="relative z-10 p-8 mt-8 text-white border bg-white/5 backdrop-blur-lg border-white/10 rounded-2xl">
+        <div className="mb-6 text-center">
+          <h3 className="flex items-center justify-center mb-2 text-2xl font-bold text-white">
+            <div className="w-2 h-2 mr-3 rounded-full bg-linear-to-br from-green-400 to-emerald-400" />
             Security Guarantees
           </h3>
         </div>
-        <div className="grid md:grid-cols-4 gap-4 text-center text-sm">
+        <div className="grid gap-4 text-sm text-center md:grid-cols-4">
           <div>
-            <div className="text-3xl font-bold mb-1 bg-linear-to-br from-green-400 to-emerald-400 bg-clip-text text-transparent">
+            <div className="mb-1 text-3xl font-bold text-transparent bg-linear-to-br from-green-400 to-emerald-400 bg-clip-text">
               0
             </div>
             <div className="text-gray-300">P0 Security Incidents</div>
           </div>
           <div>
-            <div className="text-3xl font-bold mb-1 bg-linear-to-br from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <div className="mb-1 text-3xl font-bold text-transparent bg-linear-to-br from-blue-400 to-cyan-400 bg-clip-text">
               100%
             </div>
             <div className="text-gray-300">Data Encryption</div>
           </div>
           <div>
-            <div className="text-2xl font-bold mb-1 bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <div className="mb-1 text-2xl font-bold text-transparent bg-linear-to-br from-purple-400 to-pink-400 bg-clip-text">
               OAuth
             </div>
             <div className="text-gray-300">Secure Authentication</div>
           </div>
           <div>
-            <div className="text-2xl font-bold mb-1 bg-linear-to-br from-orange-400 to-red-400 bg-clip-text text-transparent">
+            <div className="mb-1 text-2xl font-bold text-transparent bg-linear-to-br from-orange-400 to-red-400 bg-clip-text">
               RBAC
             </div>
             <div className="text-gray-300">Access Control</div>

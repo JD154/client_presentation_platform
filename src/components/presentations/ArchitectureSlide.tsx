@@ -49,8 +49,7 @@ const architectureContent = {
     },
     {
       name: 'Postgres + pgvector',
-      description:
-        'Secure data store with vector search, multi-tenant isolation',
+      description: 'Relational database and vector database',
       icon: 'database',
       connections: ['knowledge-base'],
     },
@@ -68,13 +67,13 @@ const architectureContent = {
     },
     {
       name: 'Redis + BullMQ',
-      description: 'Job queues, caching, background processing for scalability',
+      description:
+        'Task management, data storage, and performance optimization',
       icon: 'zap',
       connections: ['processing'],
     },
   ],
-  extraDescription:
-    '*The Inbound Adapter includes the Gmail Adapter, which provides secure integration with Gmail using OAuth, performs incremental email extraction, deduplication, MIME parsing, and backoff strategies for robustness and efficiency.',
+  extraDescription: '*Inbound Adapter in V1 includes the Gmail Adapter',
 }
 
 const iconMap = {
@@ -122,13 +121,13 @@ export function ArchitectureSlide({ className }: ArchitectureSlideProps) {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-12 relative z-10"
+        className="relative z-10 mb-12 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
           {title}
         </h2>
-        <div className="w-32 h-1 bg-linear-to-br from-blue-400 to-cyan-400 mx-auto rounded-full mb-4" />
-        <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+        <div className="w-32 h-1 mx-auto mb-4 rounded-full bg-linear-to-br from-blue-400 to-cyan-400" />
+        <p className="max-w-4xl mx-auto text-xl text-gray-300">
           Modular, scalable microservices architecture designed for
           multi-channel expansion
         </p>
@@ -138,27 +137,27 @@ export function ArchitectureSlide({ className }: ArchitectureSlideProps) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-6xl mx-auto w-full relative z-10"
+        className="relative z-10 w-full max-w-6xl mx-auto"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {content.components.map((component, index) => {
             const Icon = iconMap[component.icon as keyof typeof iconMap]
 
             return (
               <motion.div key={index} variants={itemVariants}>
-                <div className="h-full bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
-                  <div className="text-center pb-4">
+                <div className="h-full p-6 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-white/20 rounded-xl hover:bg-white/15 hover:scale-105 hover:shadow-2xl group">
+                  <div className="pb-4 text-center">
                     {Icon && (
-                      <div className="w-16 h-16 bg-linear-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-blue-300 group-hover:to-cyan-300 transition-all duration-300">
-                        <Icon className="h-8 w-8 text-white" />
+                      <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 transition-all duration-300 rounded-full bg-linear-to-br from-blue-400 to-cyan-400 group-hover:from-blue-300 group-hover:to-cyan-300">
+                        <Icon className="w-8 h-8 text-white" />
                       </div>
                     )}
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h3 className="mb-2 text-xl font-bold text-white">
                       {component.name}
                     </h3>
                   </div>
                   <div className="text-center">
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-sm leading-relaxed text-gray-300">
                       {component.description}
                     </p>
                   </div>
@@ -172,19 +171,19 @@ export function ArchitectureSlide({ className }: ArchitectureSlideProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="mt-12 text-center relative z-10"
+          className="relative z-10 mt-12 text-center"
         >
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="max-w-4xl p-8 mx-auto border bg-white/5 backdrop-blur-lg border-white/10 rounded-2xl">
+            <h3 className="mb-4 text-2xl font-bold text-white">
               Modular & Scalable Architecture
             </h3>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed text-gray-300">
               Each component is designed to function independently, enabling
               granular scalability and expansion to multiple communication
               channels.
             </p>
             {content.extraDescription && (
-              <p className="text-xs text-gray-400 italic mt-4">
+              <p className="mt-4 text-xs italic text-gray-400">
                 {content.extraDescription}
               </p>
             )}
