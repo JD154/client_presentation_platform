@@ -7,12 +7,6 @@ import {
   Clock,
   AlertTriangle,
 } from 'lucide-react'
-import type { SecuritySlideContent } from '../../lib/types'
-
-interface Props {
-  title: string
-  content: SecuritySlideContent
-}
 
 const iconMap = {
   shield: Shield,
@@ -26,13 +20,99 @@ const statusIcons = {
   implemented: CheckCircle,
   planned: Clock,
   ongoing: AlertTriangle,
+  'To be planned': Clock,
+  'Scoped': CheckCircle,
 }
 
-export function SecuritySlide({ title, content }: Props) {
+// Hardcoded content for FLO project security
+const securityContent = {
+  principles: [
+    {
+      title: 'Minimal Scopes & Least Privilege',
+      description: 'OAuth with minimal required scopes, role-based access controls, and principle of least privilege throughout',
+      icon: 'key',
+      implementation: [
+        'Gmail API minimal read/write scopes only',
+        'Role-based access control (RBAC) implementation',
+        'Token rotation and expiration policies',
+        'Audit trails for all access patterns',
+      ],
+    },
+    {
+      title: 'Encryption Everywhere',
+      description: 'PII encrypted at rest and in transit, secure token handling, and data minimization practices',
+      icon: 'lock',
+      implementation: [
+        'AES-256 encryption for data at rest',
+        'TLS 1.3 for all data in transit',
+        'Encrypted database connections',
+        'Secure key management with rotation',
+      ],
+    },
+    {
+      title: 'Privacy by Design',
+      description: 'PII minimization, data retention policies, and user control over personal information',
+      icon: 'shield',
+      implementation: [
+        'Minimal PII collection and storage',
+        'User-controlled data retention settings',
+        'Right to deletion and data export',
+        'Privacy-preserving analytics and logging',
+      ],
+    },
+    {
+      title: 'Zero Trust Architecture',
+      description: 'No implicit trust, continuous verification, and comprehensive monitoring of all components',
+      icon: 'eye',
+      implementation: [
+        'Continuous authentication validation',
+        'Network segmentation and micro-perimeters',
+        'Comprehensive audit logging',
+        'Real-time threat detection and response',
+      ],
+    },
+  ],
+  compliance: [
+    {
+      standard: 'OAuth 2.0 / OIDC',
+      description: 'Industry standard authentication with secure token handling',
+      status: 'Scoped' as const,
+    },
+    {
+      standard: 'GDPR Compliance',
+      description: 'European data protection regulation adherence',
+      status: 'To be planned' as const,
+    },
+    {
+      standard: 'SOC 2 Type II',
+      description: 'Security, availability, and confidentiality controls',
+      status: 'To be planned' as const,
+    },
+    {
+      standard: 'ISO 27001',
+      description: 'Information security management system standards',
+      status: 'To be planned' as const,
+    },
+    {
+      standard: 'CCPA Compliance',
+      description: 'California Consumer Privacy Act requirements',
+      status: 'To be planned' as const,
+    },
+    {
+      standard: 'Data Encryption',
+      description: 'AES-256 encryption at rest, TLS 1.3 in transit',
+      status: 'Scoped' as const,
+    },
+  ],
+}
+
+export function SecuritySlide() {
+  const title = 'Security & Compliance Framework'
+  const content = securityContent
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-slate-800 to-blue-900 p-12 flex flex-col relative">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
 
       {/* Header */}
@@ -89,7 +169,7 @@ export function SecuritySlide({ title, content }: Props) {
                         key={idx}
                         className="flex items-start text-sm text-gray-300 bg-white/5 rounded-lg p-2 hover:bg-white/10 transition-colors duration-200"
                       >
-                        <div className="w-1 h-1 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <div className="w-1 h-1 bg-green-400 rounded-full mt-2 mr-3 shrink-0"></div>
                         {item}
                       </li>
                     ))}
@@ -173,7 +253,7 @@ export function SecuritySlide({ title, content }: Props) {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>
   )
 }

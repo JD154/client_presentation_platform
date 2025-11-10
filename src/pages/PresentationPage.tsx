@@ -48,7 +48,6 @@ export function PresentationPage() {
         return (
           <HeroSlide
             key={slide.id}
-            content={slide.content as any}
             onNext={goToNext}
           />
         )
@@ -57,8 +56,6 @@ export function PresentationPage() {
         return (
           <ValuePropositionSlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -66,8 +63,6 @@ export function PresentationPage() {
         return (
           <MetricsSlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -75,8 +70,6 @@ export function PresentationPage() {
         return (
           <ScopeSlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -84,8 +77,6 @@ export function PresentationPage() {
         return (
           <TimelineSlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -93,8 +84,6 @@ export function PresentationPage() {
         return (
           <ArchitectureSlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -102,8 +91,6 @@ export function PresentationPage() {
         return (
           <TeamSlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -111,8 +98,6 @@ export function PresentationPage() {
         return (
           <SecuritySlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -120,8 +105,6 @@ export function PresentationPage() {
         return (
           <FutureExpansionSlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 
@@ -129,8 +112,6 @@ export function PresentationPage() {
         return (
           <CTASlide
             key={slide.id}
-            title={slide.title}
-            content={slide.content as any}
           />
         )
 

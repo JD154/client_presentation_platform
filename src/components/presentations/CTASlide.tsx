@@ -1,15 +1,31 @@
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
-import type { CTASlideContent } from '../../lib/types'
 import { cn } from '../../lib/utils'
 
 interface CTASlideProps {
-  content: CTASlideContent
-  title: string
   className?: string
 }
 
+// Hardcoded content for FLO project CTA
+const ctaContent = {
+  primaryAction: {
+    text: 'Start Your FLO Journey Today',
+    link: "mailto:chetan@uklok.com?subject=FLO Project - Let's Begin",
+  },
+  secondaryAction: {
+    text: 'Schedule Strategic Demo',
+    link: 'https://calendly.com/uklok/flo-strategic-demo',
+  },
+  contact: {
+    email: 'hello@uklok.com',
+    phone: '+1 (555) FLO-TEAM',
+    website: 'uklok.com/flo',
+  },
+}
+
 export function CTASlide({ className }: CTASlideProps) {
+  const title = 'Ready to Transform Your Communication Workflow?'
+  const content = ctaContent
   return (
     <div
       className={cn(

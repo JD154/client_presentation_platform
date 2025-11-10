@@ -1,12 +1,9 @@
 import { motion } from 'framer-motion'
 import { Clock, Target, Zap, TrendingUp } from 'lucide-react'
-import type { MetricsSlideContent } from '../../lib/types'
 import { Card, CardContent } from '../ui/card'
 import { cn } from '../../lib/utils'
 
 interface MetricsSlideProps {
-  content: MetricsSlideContent
-  title: string
   className?: string
 }
 
@@ -17,7 +14,39 @@ const iconMap = {
   'trending-up': TrendingUp,
 }
 
-export function MetricsSlide({ content, title, className }: MetricsSlideProps) {
+// Hardcoded content for FLO project metrics
+const metricsContent = {
+  metrics: [
+    {
+      value: '50%',
+      label: 'Time Savings',
+      description: 'Reduce average response time to priority emails within 2 weeks',
+      icon: 'clock',
+    },
+    {
+      value: '≥30%',
+      label: 'Auto-Triage Coverage',
+      description: 'Automated classification with high perceived precision and feedback loops',
+      icon: 'target',
+    },
+    {
+      value: '≤3s',
+      label: 'Lightning Speed',
+      description: 'First draft generation in seconds with thread context understanding',
+      icon: 'zap',
+    },
+    {
+      value: '100%',
+      label: 'Security First',
+      description: 'Zero P0 incidents with OAuth/OIDC and encrypted data handling',
+      icon: 'trending-up',
+    },
+  ],
+}
+
+export function MetricsSlide({ className }: MetricsSlideProps) {
+  const title = 'Guaranteed Business Outcomes'
+  const content = metricsContent
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

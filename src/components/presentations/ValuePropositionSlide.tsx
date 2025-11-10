@@ -8,12 +8,6 @@ import {
   TrendingUp,
   CheckCircle,
 } from 'lucide-react'
-import type { ValuePropositionSlideContent } from '../../lib/types'
-
-interface Props {
-  title: string
-  content: ValuePropositionSlideContent
-}
 
 const iconMap = {
   clock: Clock,
@@ -26,11 +20,81 @@ const iconMap = {
   'check-circle': CheckCircle,
 }
 
-export function ValuePropositionSlide({ title, content }: Props) {
+// Hardcoded content for FLO project value proposition
+const valuePropositionContent = {
+  mainValue: 'FLO is an input-centric platform designed to connect multiple sources into a single prioritization and drafting engine, starting with Gmail for speed and safety.',
+  benefits: [
+    {
+      title: 'Time Savings',
+      description: 'Reduce average response time to priority emails by 50% within 2 weeks',
+      icon: 'clock',
+      metric: '50%',
+    },
+    {
+      title: 'Auto-Triage Coverage',
+      description: 'Automated classification with high perceived precision and feedback loops',
+      icon: 'target',
+      metric: '≥30%',
+    },
+    {
+      title: 'Lightning Speed',
+      description: 'First draft generation in seconds with thread context understanding',
+      icon: 'zap',
+      metric: '≤3s',
+    },
+    {
+      title: 'Security First',
+      description: 'Zero P0 incidents with OAuth/OIDC and encrypted data handling',
+      icon: 'shield',
+      metric: '100%',
+    },
+  ],
+  outcomes: [
+    {
+      label: 'Immediate Productivity',
+      description: 'Users see value within first week of use',
+      icon: 'trending-up',
+    },
+    {
+      label: 'Compounding Returns',
+      description: 'AI learns and improves with each interaction',
+      icon: 'lightbulb',
+    },
+    {
+      label: 'Seamless Integration',
+      description: 'Works within existing Gmail workflow',
+      icon: 'check-circle',
+    },
+    {
+      label: 'Future Ready',
+      description: 'Extensible to multiple communication channels',
+      icon: 'users',
+    },
+    {
+      label: 'Auto-Triage Precision',
+      description: 'Perceived precision with thumbs up/down feedback loop',
+      icon: 'target',
+    },
+    {
+      label: 'Draft Generation Speed',
+      description: 'P50 / ≤7s P95 for threads ≤10 messages',
+      icon: 'zap',
+    },
+    {
+      label: 'Security Incidents',
+      description: 'P0 incidents with OAuth/OIDC & encrypted PII',
+      icon: 'trending-up',
+    },
+  ],
+}
+
+export function ValuePropositionSlide() {
+  const title = 'Revolutionizing Communication Efficiency'
+  const content = valuePropositionContent
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-slate-800 to-blue-900 p-12 flex flex-col relative">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
 
       {/* Header */}
@@ -61,7 +125,7 @@ export function ValuePropositionSlide({ title, content }: Props) {
                   <IconComponent className="w-8 h-8 text-white" />
                 </div>
                 {benefit.metric && (
-                  <div className="text-3xl font-black text-white bg-linear-to-br from-blue-300 to-cyan-300 bg-clip-text text-transparent">
+                  <div className="text-3xl font-black bg-linear-to-br from-blue-300 to-cyan-300 bg-clip-text text-transparent">
                     {benefit.metric}
                   </div>
                 )}
@@ -106,7 +170,7 @@ export function ValuePropositionSlide({ title, content }: Props) {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>
   )
 }

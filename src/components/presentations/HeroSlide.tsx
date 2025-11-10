@@ -1,16 +1,24 @@
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import type { HeroSlideContent } from '../../lib/types'
 import { Button } from '../ui/button'
 import { cn } from '../../lib/utils'
 
 interface HeroSlideProps {
-  content: HeroSlideContent
   className?: string
   onNext?: () => void
 }
 
-export function HeroSlide({ content, className, onNext }: HeroSlideProps) {
+// Hardcoded content for FLO project hero
+const heroContent = {
+  subtitle: 'The Future of Intelligent Communication',
+  description: 'FLO delivers immediate, compounding value by prioritizing critical communications and drafting high-quality replies in seconds. Transform your inbox from chaos to clarity with AI that understands what matters most.',
+  backgroundImage: '/api/placeholder/1920/1080',
+  ctaText: 'Discover The Vision',
+  ctaLink: '#value-proposition',
+}
+
+export function HeroSlide({ className, onNext }: HeroSlideProps) {
+  const content = heroContent
   return (
     <div
       className={cn(

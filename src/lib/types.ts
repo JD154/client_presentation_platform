@@ -43,7 +43,7 @@ export interface Slide {
   id: string
   type: SlideType
   title: string
-  content: SlideContent
+  content?: SlideContent
   animation?: AnimationType
   duration?: number
 }
@@ -108,6 +108,7 @@ export interface ArchitectureSlideContent extends SlideContent {
     icon?: string
     connections?: string[]
   }>
+  extraDescription?: string
 }
 
 export interface GridSlideContent extends SlideContent {
@@ -181,7 +182,7 @@ export interface SecuritySlideContent extends SlideContent {
   compliance: Array<{
     standard: string
     description: string
-    status: 'implemented' | 'planned' | 'ongoing'
+    status: 'implemented' | 'planned' | 'ongoing' | 'To be planned' | 'scoped'
   }>
 }
 

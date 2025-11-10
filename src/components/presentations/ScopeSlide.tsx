@@ -1,10 +1,4 @@
 import { CheckCircle, Clock, Lightbulb, ArrowRight } from 'lucide-react'
-import type { ScopeSlideContent } from '../../lib/types'
-
-interface Props {
-  title: string
-  content: ScopeSlideContent
-}
 
 const priorityIcons = {
   must: CheckCircle,
@@ -18,7 +12,93 @@ const priorityLabels = {
   could: 'Could Have',
 }
 
-export function ScopeSlide({ title, content }: Props) {
+// Hardcoded content for FLO project scope
+const scopeContent = {
+  must: [
+    {
+      title: 'Google OAuth Integration',
+      description:
+        'Minimal scopes with secure token handling and session management',
+      priority: 'must' as const,
+    },
+    {
+      title: 'Message Ingestion & Normalization',
+      description:
+        'Recent messages normalized from MIME to canonical JSON format',
+      priority: 'must' as const,
+    },
+    {
+      title: 'Priority Inbox Engine',
+      description:
+        'Rules + lightweight model with clear explanations for rankings',
+      priority: 'must' as const,
+    },
+    {
+      title: 'Assisted Draft Generation',
+      description:
+        'Reply/forward/new with thread context, selectable tone, source citation',
+      priority: 'must' as const,
+    },
+    {
+      title: 'Minimal UI Experience',
+      description:
+        'Priority list, thread view, context panel, "Generate draft" functionality',
+      priority: 'must' as const,
+    },
+    {
+      title: 'Telemetry & Observability',
+      description:
+        'Feedback loops, feature flags, and comprehensive monitoring',
+      priority: 'must' as const,
+    },
+  ],
+  should: [
+    {
+      title: 'Advanced Rules Engine',
+      description: 'VIP handling, SLA management, keyword-based categorization',
+      priority: 'should' as const,
+    },
+    {
+      title: 'RAG Knowledge Base',
+      description: 'pgvector-powered knowledge base for contextual responses',
+      priority: 'should' as const,
+    },
+    {
+      title: 'Reply Templates',
+      description: 'Reusable templates for common response patterns',
+      priority: 'should' as const,
+    },
+    {
+      title: 'User Settings & Preferences',
+      description:
+        'Customizable rules, tone preferences, notification settings',
+      priority: 'should' as const,
+    },
+  ],
+  could: [
+    {
+      title: 'Slack/Teams Integration',
+      description: 'Cross-platform notifications and quick reply capabilities',
+      priority: 'could' as const,
+    },
+    {
+      title: 'Daily Summaries',
+      description:
+        'Automated digest generation with key highlights and actions',
+      priority: 'could' as const,
+    },
+    {
+      title: 'Prompt A/B Testing',
+      description:
+        'Experimental framework for optimizing AI prompt performance',
+      priority: 'could' as const,
+    },
+  ],
+}
+
+export function ScopeSlide() {
+  const title = 'Structured Development Scope'
+  const content = scopeContent
   const sections = [
     {
       key: 'must' as const,
@@ -43,7 +123,7 @@ export function ScopeSlide({ title, content }: Props) {
   return (
     <div className="relative flex flex-col min-h-screen p-12 bg-linear-to-br from-gray-900 via-slate-800 to-blue-900">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
 
       {/* Header */}
@@ -134,7 +214,7 @@ export function ScopeSlide({ title, content }: Props) {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>
   )
 }

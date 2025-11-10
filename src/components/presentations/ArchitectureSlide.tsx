@@ -10,13 +10,65 @@ import {
   MessageSquare,
   Zap,
 } from 'lucide-react'
-import type { ArchitectureSlideContent } from '../../lib/types'
 import { cn } from '../../lib/utils'
 
 interface ArchitectureSlideProps {
-  content: ArchitectureSlideContent
-  title: string
   className?: string
+}
+
+// Hardcoded content for FLO project architecture
+const architectureContent = {
+  components: [
+    {
+      name: 'Inbound Adapter *',
+      description: 'Secure OAuth with incremental pull, dedupe, MIME parse, backoff strategies',
+      icon: 'mail',
+      connections: ['prioritizer', 'drafts'],
+    },
+    {
+      name: 'Prioritizer Engine',
+      description: 'Rules + lightweight model with explanations, user feedback integration',
+      icon: 'brain',
+      connections: ['store', 'telemetry'],
+    },
+    {
+      name: 'Assisted Drafts Service',
+      description: 'Prompt orchestration, guardrails, citation, human-in-the-loop validation',
+      icon: 'message-square',
+      connections: ['store', 'auth'],
+    },
+    {
+      name: 'Auth & Security Layer',
+      description: 'OIDC/OAuth, minimal scopes, encrypted PII, least privilege access',
+      icon: 'lock',
+      connections: ['all-services'],
+    },
+    {
+      name: 'Postgres + pgvector',
+      description: 'Secure data store with vector search, multi-tenant isolation',
+      icon: 'database',
+      connections: ['knowledge-base'],
+    },
+    {
+      name: 'Observability Stack',
+      description: 'OpenTelemetry, structured logging, metrics, feature flags',
+      icon: 'bar-chart',
+      connections: ['monitoring'],
+    },
+    {
+      name: 'Future Adapters',
+      description: 'Ready for Slack, Teams, WhatsApp, webhooks expansion',
+      icon: 'link',
+      connections: ['prioritizer'],
+    },
+    {
+      name: 'Redis + BullMQ',
+      description: 'Job queues, caching, background processing for scalability',
+      icon: 'zap',
+      connections: ['processing'],
+    },
+  ],
+  extraDescription: '*The Inbound Adapter includes the Gmail Adapter, which provides secure integration with Gmail using OAuth, performs incremental email extraction, deduplication, MIME parsing, and backoff strategies for robustness and efficiency.',
 }
 
 const iconMap = {
@@ -31,11 +83,9 @@ const iconMap = {
   'bar-chart': BarChart,
 }
 
-export function ArchitectureSlide({
-  content,
-  title,
-  className,
-}: ArchitectureSlideProps) {
+export function ArchitectureSlide({ className }: ArchitectureSlideProps) {
+  const title = 'Service-Agnostic & Extensible Architecture'
+  const content = architectureContent
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -127,6 +177,11 @@ export function ArchitectureSlide({
               granular scalability and expansion to multiple communication
               channels.
             </p>
+            {content.extraDescription && (
+              <p className="text-xs text-gray-400 italic mt-4">
+                {content.extraDescription}
+              </p>
+            )}
           </div>
         </motion.div>
       </motion.div>

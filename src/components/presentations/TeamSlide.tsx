@@ -8,12 +8,6 @@ import {
   Lightbulb,
   Zap,
 } from 'lucide-react'
-import type { TeamSlideContent } from '../../lib/types'
-
-interface Props {
-  title: string
-  content: TeamSlideContent
-}
 
 const roleIcons = {
   DevOps: Settings,
@@ -22,11 +16,80 @@ const roleIcons = {
   QA: Shield,
 }
 
-export function TeamSlide({ title, content }: Props) {
+// Hardcoded content for FLO project team
+const teamContent = {
+  methodology: 'Concurrent workstreams with 2-week sprints to minimize time-to-value while reducing risk',
+  team: [
+    {
+      role: 'DevOps',
+      focus: 'Infrastructure, CI/CD, observability, security hardening',
+      experience: '~4 hours/day focused on scalable infrastructure patterns',
+    },
+    {
+      role: 'Backend',
+      focus: 'API/BFF, domain models, AI integration, data processing',
+      experience: '~4 hours/day on service orchestration and business logic',
+    },
+    {
+      role: 'Frontend',
+      focus: 'React UI, user experience, real-time updates, accessibility',
+      experience: '~4 hours/day on intuitive interfaces and responsive design',
+    },
+    {
+      role: 'QA',
+      focus: 'Test automation, performance validation, security testing',
+      experience: '~4 hours/day on quality gates and acceptance criteria',
+    },
+  ],
+  workstreams: [
+    {
+      name: 'Infrastructure & Security',
+      description: 'DevOps + QA security validation',
+      duration: 'Continuous',
+    },
+    {
+      name: 'Core Platform Development',
+      description: 'Backend + Frontend integration',
+      duration: 'Sprint-based',
+    },
+    {
+      name: 'AI & Intelligence Layer',
+      description: 'Backend AI + Frontend UX optimization',
+      duration: 'Parallel tracks',
+    },
+    {
+      name: 'Quality & Performance',
+      description: 'QA + DevOps monitoring and optimization',
+      duration: 'Cross-sprint',
+    },
+  ],
+  collaboration: [
+    {
+      aspect: 'Ownership Model (CN Aligned)',
+      description: 'CN owns domain models, business logic, and UI decisions. UKLOK provides reusable infrastructure patterns and knowledge systems.',
+    },
+    {
+      aspect: 'Communication Cadence',
+      description: 'Weekly demos, telemetry reviews, backlog refinement. Ad-hoc product syncs as needed for rapid iteration.',
+    },
+    {
+      aspect: 'Deliverables Per Sprint',
+      description: 'Running build in staging, demoable flows, technical documentation, rollback plans for safe deployment.',
+    },
+    {
+      aspect: 'Quality Gates',
+      description: 'DoR/DoD validation, performance benchmarks, security reviews, user acceptance testing before each release.',
+    },
+  ],
+}
+
+export function TeamSlide() {
+  const title = 'Cross-Functional Team & Methodology'
+  const content = teamContent
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-900 via-slate-800 to-blue-900 p-12 flex flex-col relative">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
 
       {/* Header */}
@@ -209,7 +272,7 @@ export function TeamSlide({ title, content }: Props) {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>
   )
 }

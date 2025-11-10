@@ -1,19 +1,56 @@
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
-import type { TimelineSlideContent } from '../../lib/types'
 import { cn } from '../../lib/utils'
 
 interface TimelineSlideProps {
-  content: TimelineSlideContent
-  title: string
   className?: string
 }
 
-export function TimelineSlide({
-  content,
-  title,
-  className,
-}: TimelineSlideProps) {
+// Hardcoded content for FLO project timeline
+const timelineContent = {
+  phases: [
+    {
+      title: 'Sprint 1-2: Foundation & Core Auth (Dec 1 - Dec 28)',
+      duration: '4 weeks',
+      description: 'Infrastructure setup, Google OAuth, and Priority Inbox foundation with complete ingestion pipeline',
+      deliverables: [
+        'Functional login with OAuth/OIDC security',
+        'Gmail ingestion with deduplication and MIME parsing',
+        'Priority listing with AI explanations',
+        'End-to-end tracing and logging infrastructure',
+        'Internal demo ready for pilot users',
+      ],
+    },
+    {
+      title: 'Sprint 3-4: Intelligence & Assisted Drafts (Dec 29 - Jan 25)',
+      duration: '4 weeks',
+      description: 'AI-powered prioritization with explanations and assisted draft generation with guardrails',
+      deliverables: [
+        'Stable prioritizer with consistent rankings',
+        'First assisted drafts with thread grounding',
+        'Tone selection and citation implementation',
+        'Human-in-the-loop validation workflows',
+        'Pilot-ready for ≤5 users',
+      ],
+    },
+    {
+      title: 'Sprint 5-6: Performance & Production (Jan 26 - Feb 22)',
+      duration: '4 weeks',
+      description: 'Telemetry implementation, performance optimization, and production hardening for scale',
+      deliverables: [
+        'Live feedback loops and user telemetry',
+        'Performance targets achieved (≤3s P50)',
+        'Security posture reviews and hardening',
+        'V1 complete and ready for expansion',
+        'Scalability testing and cost monitoring',
+      ],
+    },
+  ],
+}
+
+export function TimelineSlide({ className }: TimelineSlideProps) {
+  const title = 'Concurrent Development Roadmap (6 Sprints)'
+  const content = timelineContent
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,7 +74,7 @@ export function TimelineSlide({
       )}
     >
       {/* Background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/10 via-transparent to-cyan-600/10" />
 
       <motion.div
@@ -75,7 +112,7 @@ export function TimelineSlide({
                   {index + 1}
                 </div>
                 {index < content.phases.length - 1 && (
-                  <div className="w-1 h-16 bg-gradient-to-b from-blue-400/50 to-cyan-400/30 mt-4 rounded-full" />
+                  <div className="w-1 h-16 bg-linear-to-b from-blue-400/50 to-cyan-400/30 mt-4 rounded-full" />
                 )}
               </div>
 
@@ -111,7 +148,7 @@ export function TimelineSlide({
                             key={delivIndex}
                             className="flex items-start gap-3 text-sm bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors duration-200"
                           >
-                            <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                            <CheckCircle className="h-5 w-5 text-green-400 shrink-0 mt-0.5" />
                             <span className="text-gray-300 leading-relaxed">
                               {deliverable}
                             </span>
@@ -128,7 +165,7 @@ export function TimelineSlide({
       </motion.div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-gray-900 to-transparent" />
     </div>
   )
 }
