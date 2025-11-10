@@ -25,16 +25,16 @@ const floPresentation: Presentation = {
       animation: 'slide-in-up',
     },
     {
-      id: 'metrics',
-      type: 'metrics',
-      title: 'Guaranteed Business Outcomes',
-      animation: 'slide-in-up',
-    },
-    {
       id: 'scope',
       type: 'scope',
       title: 'Structured Development Scope',
       animation: 'slide-in-right',
+    },
+    {
+      id: 'team',
+      type: 'team',
+      title: 'Cross-Functional Team & Methodology',
+      animation: 'slide-in-up',
     },
     {
       id: 'timeline',
@@ -48,12 +48,7 @@ const floPresentation: Presentation = {
       title: 'Service-Agnostic & Extensible Architecture',
       animation: 'slide-in-up',
     },
-    {
-      id: 'team',
-      type: 'team',
-      title: 'Cross-Functional Team & Methodology',
-      animation: 'slide-in-up',
-    },
+
     {
       id: 'security',
       type: 'security',
