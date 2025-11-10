@@ -48,8 +48,9 @@ const architectureContent = {
       connections: ['all-services'],
     },
     {
-      name: 'Postgres + pgvector',
-      description: 'Relational database and vector database',
+      name: 'Relational database and vector database',
+      description:
+        'Secure data store with vector search, multi-tenant isolation',
       icon: 'database',
       connections: ['knowledge-base'],
     },
@@ -66,9 +67,8 @@ const architectureContent = {
       connections: ['prioritizer'],
     },
     {
-      name: 'Redis + BullMQ',
-      description:
-        'Task management, data storage, and performance optimization',
+      name: 'Task management, data storage, and performance optimization',
+      description: 'Job queues, caching, background processing for scalability',
       icon: 'zap',
       connections: ['processing'],
     },
