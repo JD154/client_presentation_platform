@@ -6,26 +6,7 @@ interface CTASlideProps {
   className?: string
 }
 
-// Hardcoded content for FLO project CTA
-const ctaContent = {
-  primaryAction: {
-    text: 'Start Your FLO Journey Today',
-    link: "mailto:chetan@uklok.com?subject=FLO Project - Let's Begin",
-  },
-  secondaryAction: {
-    text: 'Schedule Strategic Demo',
-    link: 'https://calendly.com/uklok/flo-strategic-demo',
-  },
-  contact: {
-    email: 'hello@uklok.com',
-    phone: '+1 (555) FLO-TEAM',
-    website: 'uklok.com/flo',
-  },
-}
-
 export function CTASlide({ className }: CTASlideProps) {
-  const title = 'Ready to Transform Your Communication Workflow?'
-  const content = ctaContent
   return (
     <div
       className={cn(
@@ -39,7 +20,7 @@ export function CTASlide({ className }: CTASlideProps) {
         {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full"
+            className="absolute w-1 h-1 rounded-full bg-white/20"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -60,7 +41,7 @@ export function CTASlide({ className }: CTASlideProps) {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="text-center max-w-6xl relative z-10"
+        className="relative z-10 max-w-6xl text-center"
       >
         {/* Thank You Message */}
         <motion.div
@@ -70,11 +51,11 @@ export function CTASlide({ className }: CTASlideProps) {
           className="mb-16"
         >
           <div className="flex items-center justify-center mb-8">
-            <div className="w-16 h-16 bg-linear-to-br from-pink-400 to-red-400 rounded-full flex items-center justify-center">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-linear-to-br from-pink-400 to-red-400">
               <div className="text-4xl">❤️</div>
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-8 bg-linear-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+          <h1 className="mb-8 text-5xl font-black text-transparent md:text-7xl bg-linear-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text">
             Thank You!
           </h1>
         </motion.div>
@@ -84,15 +65,15 @@ export function CTASlide({ className }: CTASlideProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-10 shadow-2xl"
+          className="p-10 border shadow-2xl bg-white/10 backdrop-blur-lg border-white/20 rounded-2xl"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-12 h-12 bg-linear-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mr-4">
+            <div className="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-linear-to-br from-blue-400 to-cyan-400">
               <ExternalLink className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-3xl font-bold text-white">Detailed Proposal</h2>
           </div>
-          <p className="text-xl text-gray-200 leading-relaxed mb-6">
+          <p className="mb-6 text-xl leading-relaxed text-gray-200">
             You will receive the complete proposal in PDF format with all the
             technical details, timelines and specifications mentioned in this
             presentation.
