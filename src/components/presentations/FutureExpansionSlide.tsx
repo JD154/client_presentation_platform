@@ -87,7 +87,7 @@ const futureExpansionContent = {
       category: 'AI & Intelligence',
       title: 'Summaries That Matter',
       description:
-        'Daily digests and topic snapshots for fast catch-up on busy channels and conversations',
+        'Topic snapshots for fast catch-up on busy channels and conversations',
       impact: 'medium' as const,
       effort: 'low' as const,
       icon: 'bar-chart',
@@ -114,8 +114,7 @@ const futureExpansionContent = {
     {
       category: 'Enterprise & Scale',
       title: 'Everywhere You Work',
-      description:
-        'Mobile-friendly experience (PWA), notifications, and flexible APIs to embed FLO into your tools',
+      description: 'Native apps within mobile ecosystems',
       impact: 'high' as const,
       effort: 'high' as const,
       icon: 'smartphone',
