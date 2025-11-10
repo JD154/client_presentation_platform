@@ -31,6 +31,15 @@ const futureExpansionContent = {
   expansions: [
     {
       category: 'Automation & Workflow',
+      title: 'Assisted Replies Everywhere',
+      description:
+        'Draft, refine, and send with your voice and tone across all channels with reusable templates',
+      impact: 'high' as const,
+      effort: 'medium' as const,
+      icon: 'message-square',
+    },
+    {
+      category: 'Automation & Workflow',
       title: 'Rules and Automations',
       description:
         'Personal and team workflows to triage, route, label, and assign - no-code where possible',
@@ -39,12 +48,12 @@ const futureExpansionContent = {
       icon: 'settings',
     },
     {
-      category: 'Automation & Workflow',
-      title: 'Assisted Replies Everywhere',
+      category: 'Multi-Channel Integration',
+      title: 'Omnichannel Expansion',
       description:
-        'Draft, refine, and send with your voice and tone across all channels with reusable templates',
+        'Connect Slack, Microsoft Teams, WhatsApp, Telegram - one intelligent inbox for everything',
       impact: 'high' as const,
-      effort: 'medium' as const,
+      effort: 'low' as const,
       icon: 'message-square',
     },
     {
@@ -55,15 +64,6 @@ const futureExpansionContent = {
       impact: 'high' as const,
       effort: 'medium' as const,
       icon: 'zap',
-    },
-    {
-      category: 'Multi-Channel Integration',
-      title: 'Omnichannel Expansion',
-      description:
-        'Connect Slack, Microsoft Teams, WhatsApp, Telegram - one intelligent inbox for everything',
-      impact: 'high' as const,
-      effort: 'low' as const,
-      icon: 'message-square',
     },
     {
       category: 'AI & Intelligence',
