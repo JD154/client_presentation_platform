@@ -28,9 +28,9 @@ const valuePropositionContent = {
     {
       title: 'Time Savings',
       description:
-        'Reduce average response time to priority emails by ±50% within 2 weeks',
+        'Reduce average response time to priority emails by ~50% within 2 weeks',
       icon: 'clock',
-      metric: '±50%',
+      metric: '~50%',
     },
     {
       title: 'Auto-Triage Coverage',

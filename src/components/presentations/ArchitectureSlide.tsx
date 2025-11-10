@@ -48,7 +48,7 @@ const architectureContent = {
       connections: ['all-services'],
     },
     {
-      name: 'Relational database and vector database',
+      name: 'Relational and vector database',
       description:
         'Secure data store with vector search, multi-tenant isolation',
       icon: 'database',
