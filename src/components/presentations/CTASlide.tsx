@@ -67,16 +67,26 @@ export function CTASlide({ className }: CTASlideProps) {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="p-10 border shadow-2xl bg-white/10 backdrop-blur-lg border-white/20 rounded-2xl"
         >
-          <div className="flex items-center justify-center mb-6">
-            <div className="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-linear-to-br from-blue-400 to-cyan-400">
-              <ExternalLink className="w-6 h-6 text-white" />
-            </div>
-            <h2 className="text-3xl font-bold text-white">Detailed Proposal</h2>
+          <div className="mb-6 ">
+            <a
+              href="/flo_proposal_html_version.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open proposal HTML version in new tab"
+              className="flex items-center justify-center"
+            >
+              <div className="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-linear-to-br from-blue-400 to-cyan-400">
+                <ExternalLink className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-white">
+                View the detailed proposal
+              </h2>
+            </a>
           </div>
           <p className="mb-6 text-xl leading-relaxed text-gray-200">
-            You will receive the complete proposal in PDF format with all the
-            technical details, timelines and specifications mentioned in this
-            presentation.
+            You will also receive the complete proposal in PDF format with all
+            the technical details, timelines and specifications mentioned in
+            this presentation.
           </p>
         </motion.div>
       </motion.div>
