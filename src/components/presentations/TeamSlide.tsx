@@ -66,9 +66,9 @@ const teamContent = {
   ],
   collaboration: [
     {
-      aspect: 'Ownership Model (Chatan Aligned)',
+      aspect: 'Ownership Model (Chetan Aligned)',
       description:
-        'Chatan owns domain models, business logic, and UI decisions. UKLOK provides reusable infrastructure patterns and knowledge systems.',
+        'Chetan owns domain models, business logic, and UI decisions. UKLOK provides reusable infrastructure patterns and knowledge systems.',
     },
     {
       aspect: 'Communication Cadence',
