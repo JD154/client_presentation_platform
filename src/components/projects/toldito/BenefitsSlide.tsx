@@ -18,9 +18,10 @@ const iconMap = {
 const benefitsContent = {
   metrics: [
     {
-      value: '↓80%',
-      label: 'Ahorro de Tiempo',
-      description: 'De horas de trabajo manual a minutos de revisión asistida',
+      value: 'Automático',
+      label: 'El Sistema Trabaja Por Ti',
+      description:
+        'Empareja transacciones automáticamente. Menos trabajo manual',
       icon: 'clock',
     },
     {
