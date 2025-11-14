@@ -4,6 +4,7 @@ import { tolditoPresentation } from './toldito'
 
 // Import project-specific renderers
 import { renderSlide as renderFloSlide } from '../../../components/projects/flo'
+import { renderSlide as renderTolditoSlide } from '../../../components/projects/toldito'
 
 /**
  * Presentation data registry
@@ -24,7 +25,7 @@ type SlideRenderer = (slide: Slide, goToNext?: () => void) => React.ReactNode
 const rendererRegistry: Record<string, SlideRenderer> = {
   flo: renderFloSlide,
   'ai-assistant': renderFloSlide, // Reusing FLO renderer for ai-assistant
-  // toldito renderer will be added when slides are implemented
+  toldito: renderTolditoSlide,
 }
 
 /**
@@ -37,9 +38,7 @@ export function getPresentation(projectId: string): Presentation | null {
 /**
  * Get slide renderer function for a project
  */
-export function getSlideRenderer(
-  projectId: string
-): SlideRenderer | undefined {
+export function getSlideRenderer(projectId: string): SlideRenderer | undefined {
   return rendererRegistry[projectId]
 }
 
