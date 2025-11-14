@@ -46,6 +46,12 @@ export const tolditoPresentation: Presentation = {
       animation: 'slide-in-right',
     },
     {
+      id: 'qa',
+      type: 'custom',
+      title: 'Calidad y Transparencia',
+      animation: 'fade-in',
+    },
+    {
       id: 'tech-approach',
       type: 'custom',
       title: 'Construido Sobre Lo Que Tienes',

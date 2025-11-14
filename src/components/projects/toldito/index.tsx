@@ -4,6 +4,7 @@ import { ValuePropositionSlide } from './ValuePropositionSlide'
 import { HowItWorksSlide } from './HowItWorksSlide'
 import { BenefitsSlide } from './BenefitsSlide'
 import { TimelineSlide } from './TimelineSlide'
+import { QASlide } from './QASlide'
 import { TechApproachSlide } from './TechApproachSlide'
 import { CTASlide } from './CTASlide'
 
@@ -23,6 +24,8 @@ export function renderSlide(slide: Slide, goToNext?: () => void) {
       // Handle custom slide types based on ID
       if (slide.id === 'how-it-works') {
         return <HowItWorksSlide key={slide.id} />
+      } else if (slide.id === 'qa') {
+        return <QASlide key={slide.id} />
       } else if (slide.id === 'tech-approach') {
         return <TechApproachSlide key={slide.id} />
       }

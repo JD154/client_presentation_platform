@@ -20,6 +20,7 @@ const timelineContent = {
         'UI básica de sesiones y confirmación',
         'KPIs esenciales: cobertura, aging, diferencias',
         'Demo funcional lista para validación',
+        '✅ Tests automatizados + staging deployment',
       ],
     },
     {
@@ -33,6 +34,7 @@ const timelineContent = {
         'Acciones masivas en UI',
         'Auditoría avanzada en validators y timeline',
         'Testing E2E y performance (P50/P95)',
+        '✅ Validación con cliente + checkpoint de aprobación',
       ],
     },
     {
@@ -46,6 +48,7 @@ const timelineContent = {
         'Tuning de colas y SLAs',
         'Regresión completa de módulos existentes',
         'V1 completa lista para producción',
+        '✅ Sign-off final + documentación + training',
       ],
     },
   ],
