@@ -135,7 +135,7 @@ export function PresentationLayout({
           }}
           className="w-full min-h-screen"
         >
-          {children(slides[currentSlide], goToNext)}
+          {slides[currentSlide] && children(slides[currentSlide], goToNext)}
         </motion.div>
       </AnimatePresence>
 
