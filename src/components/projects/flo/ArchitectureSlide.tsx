@@ -10,7 +10,7 @@ import {
   MessageSquare,
   Zap,
 } from 'lucide-react'
-import { cn } from '../../lib/utils'
+import { cn } from '../../../lib/utils'
 
 interface ArchitectureSlideProps {
   className?: string

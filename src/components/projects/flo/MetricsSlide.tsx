@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Clock, Target, Zap, TrendingUp } from 'lucide-react'
-import { Card, CardContent } from '../ui/card'
-import { cn } from '../../lib/utils'
+import { Card, CardContent } from '../../ui/card'
+import { cn } from '../../../lib/utils'
 
 interface MetricsSlideProps {
   className?: string

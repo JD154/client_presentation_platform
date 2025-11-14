@@ -1,0 +1,10 @@
+{
+  "id": "toldito",
+  "clientId": "ln",
+  "name": "Toldito — Módulo de Conciliación",
+  "description": "Reconciliation module for financial ledger with full traceability and audit capabilities",
+  "status": "active",
+  "createdAt": "2025-11-14T00:00:00Z",
+  "updatedAt": "2025-11-14T00:00:00Z",
+  "tags": ["FinTech", "Reconciliation", "Ledger", "Audit", "BullMQ", "Hasura"]
+}

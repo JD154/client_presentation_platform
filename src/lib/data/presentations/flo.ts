@@ -1,7 +1,10 @@
-import type { Presentation } from '../types'
+import type { Presentation } from '../../types'
 
-// Complete presentation data for FLO project based on detailed proposal
-const floPresentation: Presentation = {
+/**
+ * Complete presentation data for FLO project
+ * Based on the detailed proposal for intelligent communication platform
+ */
+export const floPresentation: Presentation = {
   projectId: 'flo',
   config: {
     title: 'FLO — Intelligent Communication Platform',
@@ -67,30 +70,4 @@ const floPresentation: Presentation = {
       animation: 'fade-in',
     },
   ],
-}
-
-export function getPresentation(projectId: string): Presentation | null {
-  // In a real app, this would load from files or API
-  if (projectId === 'flo' || projectId === 'ai-assistant') {
-    return floPresentation
-  }
-  return null
-}
-
-export async function loadPresentationData(
-  clientId: string,
-  projectId: string
-): Promise<Presentation | null> {
-  try {
-    const response = await fetch(
-      `/data/clients/${clientId}/projects/${projectId}/content.json`
-    )
-    if (response.ok) {
-      return await response.json()
-    }
-  } catch (error) {
-    console.error('Error loading presentation data:', error)
-  }
-
-  return getPresentation(projectId)
 }

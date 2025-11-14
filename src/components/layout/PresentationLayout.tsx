@@ -30,6 +30,40 @@ export function PresentationLayout({
     setCurrentSlide(prev => Math.max(prev - 1, 0))
   }, [])
 
+  // Initialize current slide from URL hash on mount
+  useEffect(() => {
+    const hash = window.location.hash?.slice(1)
+    if (!hash) return
+    const index = slides.findIndex(s => s.id === hash)
+    if (index >= 0) {
+      setCurrentSlide(index)
+    }
+  }, [slides])
+
+  // Keep URL hash in sync with the current slide
+  useEffect(() => {
+    const id = slides[currentSlide]?.id
+    if (!id) return
+    const desiredHash = `#${id}`
+    if (window.location.hash !== desiredHash) {
+      window.location.hash = desiredHash
+    }
+  }, [currentSlide, slides])
+
+  // Update current slide if the hash changes (browser back/forward)
+  useEffect(() => {
+    const onHashChange = () => {
+      const hash = window.location.hash?.slice(1)
+      if (!hash) return
+      const index = slides.findIndex(s => s.id === hash)
+      if (index >= 0) {
+        setCurrentSlide(index)
+      }
+    }
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [slides])
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Evitar conflictos cuando hay campos de input enfocados
@@ -106,7 +140,7 @@ export function PresentationLayout({
       </AnimatePresence>
 
       {/* Controles de navegación con z-index alto para asegurar visibilidad */}
-      <div className="fixed inset-0 pointer-events-none z-40">
+      <div className="fixed inset-0 z-40 pointer-events-none">
         <div className="pointer-events-auto">
           <SlideNavigation
             currentSlide={currentSlide}

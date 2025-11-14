@@ -11,6 +11,17 @@ const clients: Client[] = [
     },
     description: 'Client focused on AI solutions for process automation',
   },
+  {
+    id: 'ln',
+    name: 'Lennon Ramirez',
+    colors: {
+      primary: '#1e293b',
+      secondary: '#f1f5f9',
+      accent: '#0ea5e9',
+    },
+    description:
+      'Financial technology solutions focusing on reconciliation and ledger management',
+  },
 ]
 
 export function getAllClients(): Client[] {

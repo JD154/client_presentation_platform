@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
-import { cn } from '../../lib/utils'
+import { cn } from '../../../lib/utils'
 
 interface TimelineSlideProps {
   className?: string
