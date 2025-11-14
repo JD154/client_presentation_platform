@@ -12,7 +12,7 @@ interface HeroSlideProps {
 const heroContent = {
   subtitle: 'Módulo de Conciliación Financiera Inteligente',
   description:
-    'Nuevo módulo que automatiza la conciliación de transacciones. Concilia los movimientos con trazabilidad total y precisión, sin cambiar de plataforma.',
+    'Nuevo módulo que automatiza la conciliación de transacciones. Concilia los movimientos con trazabilidad total y precisión.',
   ctaText: 'Descubre la Solución',
   ctaLink: '#value-proposition',
 }
