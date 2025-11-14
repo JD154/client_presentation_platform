@@ -23,66 +23,39 @@ const iconMap = {
 // Content for Toldito reconciliation value proposition
 const valuePropositionContent = {
   mainValue:
-    'Tu operación ya ingiere y valida transacciones desde múltiples fuentes. Toldito transforma ese flujo en un Libro de Órdenes conciliado que empareja entradas/salidas automáticamente, con trazabilidad total y auditoría completa.',
+    'Un flujo que empareja entradas/salidas automáticamente, con trazabilidad total y auditoría completa.',
   benefits: [
     {
-      title: 'Conciliación Rápida',
+      label: 'Una Sola Verdad',
       description:
-        '90% de movimientos conciliados en menos de 15 minutos con asistencia',
-      icon: 'clock',
-      metric: '≥90%',
-    },
-    {
-      title: 'Matching Automático',
-      description:
-        'Precisión del 85% en matches automáticos con tolerancias configurables',
-      icon: 'target',
-      metric: '≥85%',
-    },
-    {
-      title: 'Trazabilidad Total',
-      description:
-        '100% de acciones con evidencia auditada: quién, cuándo y por qué',
-      icon: 'shield',
-      metric: '100%',
-    },
-    {
-      title: 'Velocidad Operativa',
-      description:
-        'Respuesta ultrarrápida en vistas de conciliación y acciones masivas',
-      icon: 'zap',
-      metric: '≤2s',
-    },
-  ],
-  outcomes: [
-    {
-      label: 'Ahorro de Tiempo',
-      description: 'De horas manuales a minutos automáticos',
-      icon: 'clock',
-    },
-    {
-      label: 'Visibilidad Inmediata',
-      description: 'KPIs en tiempo real de tasa de conciliación',
-      icon: 'trending-up',
-    },
-    {
-      label: 'Auditoría Completa',
-      description: 'Evidencia total para compliance y auditoría',
-      icon: 'file-check',
-    },
-    {
-      label: 'Sin Interrupciones',
-      description: 'Construido sobre tu stack actual (Hasura, BullMQ)',
-      icon: 'check-circle',
-    },
-    {
-      label: 'Multimoneda',
-      description: 'Normalización automática con tipos de cambio',
+        'Todo en un solo lugar. No más comparar archivos ni buscar en múltiples sistemas',
       icon: 'database',
     },
     {
-      label: 'Evidencias',
-      description: 'Metadata, adjuntos y notas operativas',
+      label: 'Ve Todo en Tiempo Real',
+      description: 'Abres el dashboard y sabes exactamente qué está pendiente',
+      icon: 'trending-up',
+    },
+    {
+      label: 'Lista Para Auditar',
+      description: 'Cada transacción tiene su historia completa documentada',
+      icon: 'file-check',
+    },
+    {
+      label: 'Cero Drama Técnico',
+      description:
+        'Nueva funcionalidad que se integra al sistema existente, sin interrupciones',
+      icon: 'check-circle',
+    },
+    {
+      label: 'Todas las Monedas',
+      description: 'USD, bolívares, crypto. Todo normalizado automáticamente',
+      icon: 'database',
+    },
+    {
+      label: 'Pruebas Adjuntas',
+      description:
+        'Capturas, montos, referencias. Todo guardado junto a cada movimiento',
       icon: 'shield',
     },
   ],
@@ -98,8 +71,8 @@ export function ValuePropositionSlide() {
       <div className="absolute inset-0 bg-linear-to-br from-yellow-600/10 via-transparent to-amber-600/10" />
 
       {/* Header */}
-      <div className="relative z-10 mb-12 text-center">
-        <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl">
+      <div className="relative z-10 mb-16 text-center">
+        <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
           {title}
         </h1>
         <div className="w-32 h-1 mx-auto mb-6 rounded-full bg-linear-to-br from-yellow-400 to-amber-400" />
@@ -108,73 +81,34 @@ export function ValuePropositionSlide() {
         </div>
       </div>
 
-      {/* Benefits Grid */}
-      <div className="relative z-10 mb-12">
-        <h2 className="mb-8 text-2xl font-bold text-left text-white">
-          Indicadores Clave de Rendimiento
+      {/* Central Benefits Grid */}
+      <div className="relative z-10 max-w-6xl mx-auto">
+        <h2 className="mb-12 text-3xl font-bold text-center text-white md:text-4xl">
+          Lo Que Obtienes
         </h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {content.benefits.map((benefit, index) => {
             const IconComponent = benefit.icon
               ? iconMap[benefit.icon as keyof typeof iconMap]
-              : Clock
+              : CheckCircle
 
             return (
               <div
                 key={index}
-                className="p-6 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-yellow-500/20 rounded-xl hover:bg-white/15 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 group"
+                className="p-8 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-yellow-500/20 rounded-2xl hover:bg-white/15 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 group"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center justify-center w-16 h-16 transition-all duration-300 rounded-full bg-linear-to-br from-yellow-400 to-amber-500 group-hover:from-yellow-300 group-hover:to-amber-400">
-                    <IconComponent className="w-8 h-8 text-black" />
-                  </div>
-                  {benefit.metric && (
-                    <div className="text-3xl font-black text-transparent bg-linear-to-br from-yellow-300 to-amber-300 bg-clip-text">
-                      {benefit.metric}
-                    </div>
-                  )}
+                <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 transition-all duration-300 rounded-full bg-linear-to-br from-yellow-400 to-amber-500 group-hover:from-yellow-300 group-hover:to-amber-400">
+                  <IconComponent className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-white">
-                  {benefit.title}
+                <h3 className="mb-3 text-xl font-bold text-center text-white">
+                  {benefit.label}
                 </h3>
-                <p className="text-sm leading-relaxed text-gray-300">
+                <p className="text-base leading-relaxed text-center text-gray-300">
                   {benefit.description}
                 </p>
               </div>
             )
           })}
-        </div>
-      </div>
-
-      {/* Business Outcomes */}
-      <div>
-        <h2 className="mb-6 text-2xl font-bold text-left text-white">
-          Beneficios Inmediatos
-        </h2>
-        <div className="relative z-10 p-8 border bg-white/5 backdrop-blur-lg border-yellow-500/10 rounded-2xl">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {content.outcomes.map((outcome, index) => {
-              const IconComponent = outcome.icon
-                ? iconMap[outcome.icon as keyof typeof iconMap]
-                : CheckCircle
-
-              return (
-                <div key={index} className="flex items-start">
-                  <div className="p-2 mt-1 mr-3 rounded-lg bg-linear-to-br from-yellow-400 to-amber-500 shrink-0">
-                    <IconComponent className="w-5 h-5 text-black" />
-                  </div>
-                  <div>
-                    <h4 className="mb-1 font-semibold text-white">
-                      {outcome.label}
-                    </h4>
-                    <p className="text-sm text-gray-300">
-                      {outcome.description}
-                    </p>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
         </div>
       </div>
 
