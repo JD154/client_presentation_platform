@@ -90,11 +90,8 @@ export function CTASlide({ className }: CTASlideProps) {
           {nextSteps.map((step, index) => {
             const Icon = step.icon
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                 className="p-6 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-yellow-500/20 rounded-xl hover:bg-white/15 hover:border-yellow-500/40 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20"
               >
                 <div className="flex items-center justify-center mx-auto mb-4 rounded-full w-14 h-14 bg-linear-to-br from-yellow-400 to-amber-500">
@@ -106,7 +103,7 @@ export function CTASlide({ className }: CTASlideProps) {
                 <p className="text-sm leading-relaxed text-center text-gray-300">
                   {step.description}
                 </p>
-              </motion.div>
+              </div>
             )
           })}
         </motion.div>
