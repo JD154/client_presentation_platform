@@ -12,7 +12,7 @@ interface HeroSlideProps {
 const heroContent = {
   subtitle: 'Módulo de Conciliación Financiera Inteligente',
   description:
-    'Nuevo módulo integrado a tu sistema administrativo que automatiza la conciliación de transacciones. Concilia el 90% de tus movimientos en menos de 15 minutos, con trazabilidad total y precisión del 85% en matching automático, sin cambiar de plataforma.',
+    'Nuevo módulo que automatiza la conciliación de transacciones. Concilia los movimientos con trazabilidad total y precisión, sin cambiar de plataforma.',
   ctaText: 'Descubre la Solución',
   ctaLink: '#value-proposition',
 }
