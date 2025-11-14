@@ -65,11 +65,8 @@ export function QASlide() {
           {qaApproach.map((item, index) => {
             const Icon = item.icon
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                 className="p-8 transition-all duration-300 border bg-white/5 backdrop-blur-lg border-white/10 rounded-2xl hover:bg-white/10 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
               >
                 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-linear-to-br from-emerald-400 to-green-500">
@@ -92,7 +89,7 @@ export function QASlide() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </motion.div>
