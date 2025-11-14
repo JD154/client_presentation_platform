@@ -70,12 +70,12 @@ export function CTASlide({ className }: CTASlideProps) {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
           <h1 className="mb-6 text-5xl font-black text-transparent md:text-7xl bg-linear-to-r from-yellow-300 via-amber-300 to-yellow-400 bg-clip-text">
             Próximos Pasos
           </h1>
-          <p className="text-2xl text-gray-300 max-w-3xl mx-auto">
+          <p className="max-w-3xl mx-auto text-2xl text-gray-300">
             Comencemos a transformar tu conciliación financiera
           </p>
         </motion.div>
@@ -85,7 +85,7 @@ export function CTASlide({ className }: CTASlideProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid md:grid-cols-3 gap-6 mb-12"
+          className="grid gap-6 mb-12 md:grid-cols-3"
         >
           {nextSteps.map((step, index) => {
             const Icon = step.icon
@@ -95,15 +95,15 @@ export function CTASlide({ className }: CTASlideProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="p-6 bg-white/10 backdrop-blur-lg border border-yellow-500/20 rounded-xl hover:bg-white/15 hover:border-yellow-500/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20"
+                className="p-6 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-yellow-500/20 rounded-xl hover:bg-white/15 hover:border-yellow-500/40 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-linear-to-br from-yellow-400 to-amber-500 flex items-center justify-center">
-                  <Icon className="w-7 h-7 text-black" />
+                <div className="flex items-center justify-center mx-auto mb-4 rounded-full w-14 h-14 bg-linear-to-br from-yellow-400 to-amber-500">
+                  <Icon className="text-black w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">
+                <h3 className="mb-3 text-xl font-bold text-center text-white">
                   {step.title}
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed text-center">
+                <p className="text-sm leading-relaxed text-center text-gray-300">
                   {step.description}
                 </p>
               </motion.div>
@@ -118,25 +118,19 @@ export function CTASlide({ className }: CTASlideProps) {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
-          <div className="p-10 bg-white/5 backdrop-blur-lg border border-yellow-500/20 rounded-2xl shadow-2xl">
+          <div className="p-10 border shadow-2xl bg-white/5 backdrop-blur-lg border-yellow-500/20 rounded-2xl">
             <div className="mb-6">
               <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-linear-to-br from-yellow-400 to-amber-500">
                 <span className="text-4xl">🤝</span>
               </div>
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <h2 className="mb-4 text-3xl font-bold text-white">
                 ¿Listo para empezar?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              <p className="max-w-2xl mx-auto text-xl leading-relaxed text-gray-300">
                 Agenda una sesión de discovery para validar volúmenes y definir
                 el roadmap exacto. Primera demo funcional en{' '}
-                <span className="text-yellow-400 font-bold">2-3 semanas</span>.
+                <span className="font-bold text-yellow-400">2-3 semanas</span>.
               </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 border-t border-yellow-500/20">
-              <div className="text-gray-400 text-sm">
-                📧 Contáctanos para agendar
-              </div>
             </div>
           </div>
         </motion.div>
