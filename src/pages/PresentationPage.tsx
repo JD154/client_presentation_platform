@@ -41,7 +41,13 @@ export function PresentationPage() {
     ? getSlideRenderer(projectId) || defaultSlideRenderer
     : defaultSlideRenderer
 
-  if (!client || !project || !presentation) {
+  if (
+    !client ||
+    !project ||
+    !presentation ||
+    !presentation.slides ||
+    presentation.slides.length === 0
+  ) {
     return (
       <div className="h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
