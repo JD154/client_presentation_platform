@@ -4,6 +4,7 @@ import { tolditoPresentation } from './toldito'
 
 // Import project-specific renderers
 import { renderSlide as renderFloSlide } from '../../../components/projects/flo'
+import { renderSlide as renderTolditoSlide } from '../../../components/projects/toldito'
 
 /**
  * Presentation data registry
@@ -11,7 +12,6 @@ import { renderSlide as renderFloSlide } from '../../../components/projects/flo'
  */
 const presentationRegistry: Record<string, Presentation> = {
   flo: floPresentation,
-  'ai-assistant': floPresentation, // Reusing FLO presentation for ai-assistant
   toldito: tolditoPresentation,
 }
 
@@ -24,7 +24,7 @@ type SlideRenderer = (slide: Slide, goToNext?: () => void) => React.ReactNode
 const rendererRegistry: Record<string, SlideRenderer> = {
   flo: renderFloSlide,
   'ai-assistant': renderFloSlide, // Reusing FLO renderer for ai-assistant
-  // toldito renderer will be added when slides are implemented
+  toldito: renderTolditoSlide,
 }
 
 /**
@@ -37,9 +37,7 @@ export function getPresentation(projectId: string): Presentation | null {
 /**
  * Get slide renderer function for a project
  */
-export function getSlideRenderer(
-  projectId: string
-): SlideRenderer | undefined {
+export function getSlideRenderer(projectId: string): SlideRenderer | undefined {
   return rendererRegistry[projectId]
 }
 
@@ -75,14 +73,14 @@ export function defaultSlideRenderer(
   return (
     <div
       key={slide.id}
-      className="h-full flex items-center justify-center bg-gray-100"
+      className="flex items-center justify-center h-full bg-gray-100"
     >
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">{slide.title}</h2>
+        <h2 className="mb-4 text-2xl font-bold text-gray-800">{slide.title}</h2>
         <p className="text-gray-600">
           Presentación en desarrollo para este proyecto
         </p>
-        <p className="text-sm text-gray-500 mt-2">
+        <p className="mt-2 text-sm text-gray-500">
           Tipo de slide: {slide.type}
         </p>
       </div>
