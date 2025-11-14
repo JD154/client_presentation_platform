@@ -10,9 +10,9 @@ interface HeroSlideProps {
 
 // Content for Toldito reconciliation module
 const heroContent = {
-  subtitle: 'Conciliación Financiera Inteligente',
+  subtitle: 'Módulo de Conciliación Financiera Inteligente',
   description:
-    'Transforma transacciones dispersas en un libro ordenado automáticamente. Toldito concilia el 90% de tus movimientos en menos de 15 minutos, con trazabilidad total y precisión del 85% en matching automático.',
+    'Nuevo módulo integrado a tu sistema administrativo que automatiza la conciliación de transacciones. Concilia el 90% de tus movimientos en menos de 15 minutos, con trazabilidad total y precisión del 85% en matching automático, sin cambiar de plataforma.',
   ctaText: 'Descubre la Solución',
   ctaLink: '#value-proposition',
 }
@@ -37,7 +37,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-yellow-400/20 rounded-full"
+            className="absolute w-2 h-2 rounded-full bg-yellow-400/20"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -55,7 +55,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-8 text-center text-white">
+      <div className="relative z-10 max-w-6xl px-8 mx-auto text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,14 +67,14 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
             transition={{ duration: 1, delay: 0.4 }}
             className="mb-8"
           >
-            <div className="text-6xl md:text-8xl font-black tracking-tight mb-4">
-              <span className="bg-linear-to-br from-yellow-400 via-amber-400 to-yellow-300 bg-clip-text text-transparent">
-                Toldito
+            <div className="mb-4 text-6xl font-black tracking-tight md:text-8xl">
+              <span className="text-transparent bg-linear-to-br from-yellow-400 via-amber-400 to-yellow-300 bg-clip-text">
+                Toldito Amarillo
               </span>
             </div>
 
             {content.subtitle && (
-              <div className="text-2xl md:text-4xl font-light text-yellow-100 mb-8 tracking-wide">
+              <div className="mb-8 text-2xl font-light tracking-wide text-yellow-100 md:text-4xl">
                 {content.subtitle}
               </div>
             )}
@@ -84,7 +84,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mb-12 font-light"
+            className="max-w-4xl mx-auto mb-12 text-xl font-light leading-relaxed text-gray-200 md:text-2xl"
           >
             {content.description}
           </motion.div>
@@ -97,7 +97,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
             >
               <Button
                 size="lg"
-                className="text-lg px-12 py-6 h-auto bg-linear-to-br from-yellow-500 to-amber-500 hover:from-yellow-600 hover:to-amber-600 text-black border-0 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 font-bold"
+                className="h-auto px-12 py-6 text-lg font-bold text-black transition-all duration-300 transform border-0 rounded-full shadow-2xl bg-linear-to-br from-yellow-500 to-amber-500 hover:from-yellow-600 hover:to-amber-600 hover:scale-105"
                 onClick={() => {
                   if (onNext) {
                     onNext()
@@ -108,7 +108,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
                 }}
               >
                 {content.ctaText}
-                <ArrowRight className="ml-3 h-6 w-6" />
+                <ArrowRight className="w-6 h-6 ml-3" />
               </Button>
             </motion.div>
           )}

@@ -12,7 +12,6 @@ import { renderSlide as renderTolditoSlide } from '../../../components/projects/
  */
 const presentationRegistry: Record<string, Presentation> = {
   flo: floPresentation,
-  'ai-assistant': floPresentation, // Reusing FLO presentation for ai-assistant
   toldito: tolditoPresentation,
 }
 
@@ -74,14 +73,14 @@ export function defaultSlideRenderer(
   return (
     <div
       key={slide.id}
-      className="h-full flex items-center justify-center bg-gray-100"
+      className="flex items-center justify-center h-full bg-gray-100"
     >
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">{slide.title}</h2>
+        <h2 className="mb-4 text-2xl font-bold text-gray-800">{slide.title}</h2>
         <p className="text-gray-600">
           Presentación en desarrollo para este proyecto
         </p>
-        <p className="text-sm text-gray-500 mt-2">
+        <p className="mt-2 text-sm text-gray-500">
           Tipo de slide: {slide.type}
         </p>
       </div>
