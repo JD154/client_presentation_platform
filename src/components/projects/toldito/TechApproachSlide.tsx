@@ -13,7 +13,7 @@ const newModule = {
   name: 'Módulo de Conciliación',
   features: [
     'Área de trabajo para revisar y aprobar conciliaciones',
-    'Proceso automático que compara facturas con pagos',
+    'Proceso automático que compara transacciones entrantes y salientes',
     'Pantallas intuitivas para gestionar coincidencias',
     'Reportes visuales para seguimiento del negocio',
   ],
@@ -34,11 +34,11 @@ export function TechApproachSlide() {
         className="relative z-10 mb-16 text-center"
       >
         <h2 className="mb-6 text-4xl font-bold text-white md:text-6xl">
-          Construido Sobre Lo Que Tienes
+          Una Pieza Más del Sistema
         </h2>
         <div className="w-32 h-1 mx-auto rounded-full bg-linear-to-br from-yellow-400 to-amber-400" />
         <p className="max-w-3xl mx-auto mt-6 text-xl text-gray-300">
-          Sin romper nada · Evolución, no revolución
+          Se integra perfectamente con lo que ya funciona
         </p>
       </motion.div>
 
@@ -55,7 +55,9 @@ export function TechApproachSlide() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-linear-to-br from-green-400 to-emerald-500">
                   <CheckCircle2 className="text-white w-7 h-7" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Stack Actual</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  Sistema Existente
+                </h3>
               </div>
 
               <div className="space-y-4">
@@ -80,7 +82,7 @@ export function TechApproachSlide() {
 
               <div className="p-4 mt-6 border rounded-lg bg-green-500/10 border-green-500/30">
                 <p className="text-sm font-medium text-center text-green-100">
-                  ✅ Continúa funcionando sin cambios
+                  ✅ Sigue operando normalmente
                 </p>
               </div>
             </div>
@@ -133,28 +135,12 @@ export function TechApproachSlide() {
 
               <div className="p-4 mt-6 border rounded-lg bg-yellow-500/10 border-yellow-500/30">
                 <p className="text-sm font-medium text-center text-yellow-100">
-                  ⚡ Agrega valor sin romper contratos
+                  ⚡ Nueva capacidad que se conecta con todo lo demás
                 </p>
               </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom message */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center"
-        >
-          <div className="inline-block px-8 py-4 border rounded-full bg-white/5 border-white/10">
-            <p className="font-medium text-gray-200">
-              Reutilizamos{' '}
-              <span className="font-bold text-yellow-400">100%</span> de tu
-              infraestructura actual
-            </p>
-          </div>
-        </motion.div>
       </div>
 
       {/* Bottom gradient fade */}

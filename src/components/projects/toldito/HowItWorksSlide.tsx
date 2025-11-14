@@ -27,7 +27,7 @@ const steps = [
 
 export function HowItWorksSlide() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center p-12 bg-linear-to-br from-gray-900 via-slate-900 to-black">
+    <div className="relative flex flex-col items-center justify-center min-h-screen p-12 bg-linear-to-br from-gray-900 via-slate-900 to-black">
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-size-[50px_50px]" />
       <div className="absolute inset-0 bg-linear-to-br from-yellow-600/10 via-transparent to-amber-600/10" />
@@ -39,18 +39,18 @@ export function HowItWorksSlide() {
         transition={{ duration: 0.6 }}
         className="relative z-10 mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <h2 className="mb-6 text-4xl font-bold text-white md:text-6xl">
           Cómo Funciona
         </h2>
-        <div className="w-32 h-1 bg-linear-to-br from-yellow-400 to-amber-400 mx-auto rounded-full" />
-        <p className="text-gray-300 mt-6 text-xl max-w-3xl mx-auto">
+        <div className="w-32 h-1 mx-auto rounded-full bg-linear-to-br from-yellow-400 to-amber-400" />
+        <p className="max-w-3xl mx-auto mt-6 text-xl text-gray-300">
           Tres pasos simples para transformar el caos en orden
         </p>
       </motion.div>
 
       {/* Steps Flow */}
-      <div className="relative z-10 max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
+      <div className="relative z-10 w-full max-w-7xl">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4">
           {steps.map((step, index) => {
             const Icon = step.icon
             return (
@@ -63,15 +63,15 @@ export function HowItWorksSlide() {
               >
                 {/* Connecting Arrow (except for last item) */}
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-6 z-20">
+                  <div className="absolute z-20 hidden md:block top-1/2 -right-6">
                     <ArrowRight className="w-8 h-8 text-yellow-400" />
                   </div>
                 )}
 
                 {/* Step Card */}
-                <div className="relative p-8 h-full bg-white/10 backdrop-blur-lg border border-yellow-500/20 rounded-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 group">
+                <div className="relative h-full p-8 transition-all duration-300 border bg-white/10 backdrop-blur-lg border-yellow-500/20 rounded-2xl hover:bg-white/15 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 group">
                   {/* Step Number */}
-                  <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-linear-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-black font-black text-xl shadow-lg">
+                  <div className="absolute flex items-center justify-center w-12 h-12 text-xl font-black text-black rounded-full shadow-lg -top-4 -left-4 bg-linear-to-br from-yellow-400 to-amber-500">
                     {index + 1}
                   </div>
 
@@ -85,10 +85,10 @@ export function HowItWorksSlide() {
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-white mb-4 text-center">
+                  <h3 className="mb-4 text-2xl font-bold text-center text-white">
                     {step.title}
                   </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
+                  <p className="leading-relaxed text-center text-gray-300">
                     {step.description}
                   </p>
                 </div>
@@ -97,20 +97,6 @@ export function HowItWorksSlide() {
           })}
         </div>
       </div>
-
-      {/* Bottom note */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1 }}
-        className="relative z-10 mt-16 text-center"
-      >
-        <div className="inline-block px-6 py-3 bg-yellow-500/10 border border-yellow-500/30 rounded-full">
-          <p className="text-yellow-100 text-sm font-medium">
-            ⚡ Todo construido sobre tu infraestructura actual
-          </p>
-        </div>
-      </motion.div>
 
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-black to-transparent" />

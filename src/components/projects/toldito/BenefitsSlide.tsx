@@ -35,13 +35,6 @@ const benefitsContent = {
       description: 'Evidencia auditada de quién, cuándo y por qué se concilió',
       icon: 'lock',
     },
-    {
-      value: '0',
-      label: 'Sin Interrupciones',
-      description:
-        'Construido sobre tu stack actual sin romper contratos existentes',
-      icon: 'zap',
-    },
   ],
 }
 
@@ -77,13 +70,13 @@ export function BenefitsSlide({ className }: BenefitsSlideProps) {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16 relative z-10"
+        className="relative z-10 mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <h2 className="mb-6 text-4xl font-bold text-white md:text-6xl">
           {title}
         </h2>
-        <div className="w-32 h-1 bg-linear-to-br from-yellow-400 to-amber-400 mx-auto rounded-full" />
-        <p className="text-gray-300 mt-4 text-lg max-w-2xl mx-auto">
+        <div className="w-32 h-1 mx-auto rounded-full bg-linear-to-br from-yellow-400 to-amber-400" />
+        <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-300">
           Valor tangible desde el primer día de implementación
         </p>
       </motion.div>
@@ -92,27 +85,27 @@ export function BenefitsSlide({ className }: BenefitsSlideProps) {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl w-full relative z-10"
+        className="relative z-10 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl"
       >
         {content.metrics.map((metric, index) => {
           const Icon = iconMap[metric.icon as keyof typeof iconMap]
 
           return (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="text-center h-full bg-white/10 backdrop-blur-lg border-yellow-500/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 group">
+              <Card className="h-full text-center transition-all duration-300 bg-white/10 backdrop-blur-lg border-yellow-500/20 hover:bg-white/15 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/20 group">
                 <CardContent className="p-8">
                   {Icon && (
                     <motion.div
-                      className="w-20 h-20 bg-linear-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-yellow-300 group-hover:to-amber-400 transition-all duration-300"
+                      className="flex items-center justify-center w-20 h-20 mx-auto mb-6 transition-all duration-300 rounded-full bg-linear-to-br from-yellow-400 to-amber-500 group-hover:from-yellow-300 group-hover:to-amber-400"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.8 }}
                     >
-                      <Icon className="h-10 w-10 text-black" />
+                      <Icon className="w-10 h-10 text-black" />
                     </motion.div>
                   )}
 
                   <motion.div
-                    className="text-5xl font-black text-white mb-4 bg-linear-to-br from-yellow-300 to-amber-300 bg-clip-text"
+                    className="mb-4 text-3xl font-black text-white bg-linear-to-br from-yellow-300 to-amber-300 bg-clip-text"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
@@ -120,12 +113,12 @@ export function BenefitsSlide({ className }: BenefitsSlideProps) {
                     {metric.value}
                   </motion.div>
 
-                  <h3 className="text-xl font-semibold text-gray-100 mb-3">
+                  <h3 className="mb-3 text-xl font-semibold text-gray-100">
                     {metric.label}
                   </h3>
 
                   {metric.description && (
-                    <p className="text-gray-300 text-sm leading-relaxed">
+                    <p className="text-sm leading-relaxed text-gray-300">
                       {metric.description}
                     </p>
                   )}
