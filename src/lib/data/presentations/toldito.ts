@@ -40,6 +40,12 @@ export const tolditoPresentation: Presentation = {
       animation: 'slide-in-up',
     },
     {
+      id: 'team',
+      type: 'team',
+      title: 'Equipo y Flujos de Trabajo',
+      animation: 'slide-in-right',
+    },
+    {
       id: 'timeline',
       type: 'timeline',
       title: 'Plan de Entrega',

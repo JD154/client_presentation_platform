@@ -94,7 +94,7 @@ export function TimelineSlide({ className }: TimelineSlideProps) {
         </h2>
         <div className="w-32 h-1 mx-auto mb-4 rounded-full bg-linear-to-br from-yellow-400 to-amber-400" />
         <p className="max-w-4xl mx-auto text-xl text-gray-300">
-          Implementación en 3 fases · 6-7 semanas calendario · Valor incremental
+          Implementación en 3 fases · 5-7 semanas calendario · Valor incremental
         </p>
       </motion.div>
 

@@ -7,6 +7,7 @@ import { TimelineSlide } from './TimelineSlide'
 import { QASlide } from './QASlide'
 import { TechApproachSlide } from './TechApproachSlide'
 import { CTASlide } from './CTASlide'
+import { TeamSlide } from './TeamSlide'
 
 /**
  * Render function for Toldito project slides
@@ -49,6 +50,9 @@ export function renderSlide(slide: Slide, goToNext?: () => void) {
 
     case 'timeline':
       return <TimelineSlide key={slide.id} />
+
+    case 'team':
+      return <TeamSlide key={slide.id} />
 
     case 'cta':
       return <CTASlide key={slide.id} />
