@@ -12,7 +12,7 @@ const clients: Client[] = [
     description: 'Client focused on AI solutions for process automation',
   },
   {
-    id: 'ln',
+    id: 'lr',
     name: 'Lennon Ramirez',
     colors: {
       primary: '#1e293b',

@@ -21,54 +21,59 @@ const roleIcons = {
 
 // Content derived from Toldito proposal (smaller squad and phases)
 const teamContent = {
-  methodology: 'Equipo pequeño y enfocado con prioridades definidas.',
+  methodology: 'Demo cada dos semanas; seguimiento semanal y ajustes rápidos.',
   team: [
     {
       role: 'Backend',
-      focus: 'Hace que la conciliación sea confiable y trazable.',
-      experience: 'Dedicación principal — convierte reglas en resultados.',
+      focus: 'Construye reglas que proponen emparejamientos confiables.',
+      experience: 'Amplia experiencia en datos y procesos financieros.',
     },
     {
       role: 'Frontend',
-      focus:
-        'Diseña pantallas simples para conciliar rápido, con mensajes claros.',
-      experience: 'Dedicación principal — fluidez y accesibilidad.',
+      focus: 'Crea pantallas simples, rápidas y fáciles de usar.',
+      experience: 'Experiencia creando interfaces rápidas y accesibles.',
     },
     {
       role: 'DevOps',
-      focus: 'Mantiene el sistema estable y seguro (despliegues y monitoreo).',
-      experience: 'Dedicación parcial — apoyo especializado.',
+      focus: 'Mantiene entornos estables y despliegues seguros y repetibles.',
+      experience:
+        'Experiencia operando sistemas en producción estable y segura.',
     },
     {
       role: 'QA',
-      focus: 'Comprueba que todo funcione y que no se rompa lo existente.',
-      experience: 'Dedicación parcial — pruebas y control de cambios.',
+      focus: 'Define casos y valida cada entrega con datos reales.',
+      experience: 'Experiencia en pruebas completas de punta a punta.',
     },
   ],
   workstreams: [
     {
-      name: 'Fase 1 — Base funcional',
+      name: 'Planning — Prerrequisitos',
       description:
-        'Conciliación básica con reglas claras, vista simple y métricas esenciales.',
-      duration: '2–3 semanas',
+        'Aseguramos coordinación con el cliente y preparamos alcance con precisión.',
+      duration: '1–2 semanas',
     },
     {
-      name: 'Fase 2 — Inteligencia y evidencias',
-      description:
-        'Sugerencias más acertadas, adjuntar evidencias y acciones masivas.',
+      name: 'Sprint 1 — Plan y esquema',
+      description: 'Pantalla inicial y base de reglas listas para probar.',
       duration: '2 semanas',
     },
     {
-      name: 'Fase 3 — Optimización y reportes',
+      name: 'Sprint 2 — Emparejar y consultas',
       description:
-        'Paneles de control, mejoras de velocidad y preparación para producción.',
+        'Generamos propuestas de emparejamiento y consultas de datos confiables.',
+      duration: '2 semanas',
+    },
+    {
+      name: 'Sprint 3 — Aplicar sin duplicados',
+      description:
+        'Evidencias y notas completas; pulimos rendimiento y estabilidad.',
       duration: '2 semanas',
     },
   ],
   stats: [
     { label: 'Semanas', value: '5–7' },
     { label: 'Personas', value: '3–4' },
-    { label: 'Cadencia', value: 'Demo cada 2 semanas' },
+    { label: 'Cadencia', value: '2 semanas' },
   ],
 }
 

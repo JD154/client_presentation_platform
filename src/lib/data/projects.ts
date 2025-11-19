@@ -22,7 +22,7 @@ const projects: Project[] = [
   },
   {
     id: 'toldito',
-    clientId: 'ln',
+    clientId: 'lr',
     name: 'Toldito — Módulo de Conciliación',
     description:
       'Reconciliation module for financial ledger with full traceability and audit capabilities',
