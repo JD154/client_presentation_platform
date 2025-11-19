@@ -6,49 +6,62 @@ interface TimelineSlideProps {
   className?: string
 }
 
-// Content for Toldito timeline - 3 phases
+// Content for Toldito timeline - Épica + 3 sprints
 const timelineContent = {
   phases: [
     {
-      title: 'Fase 1 — Núcleo',
-      duration: '2-3 semanas',
+      title: 'Planning — Prerrequisitos',
+      duration: '1–2 semanas',
       description:
-        'Motor de conciliación, UI básica y KPIs esenciales para demo funcional',
+        'Preparamos accesos, datos y entorno para iniciar sin fricciones.',
       deliverables: [
-        'Migraciones Hasura con policies RLS',
-        'Motor de conciliación exacto/tolerancias + normalización FX',
-        'UI básica de sesiones y confirmación',
-        'KPIs esenciales: cobertura, aging, diferencias',
-        'Demo funcional lista para validación',
-        '✅ Tests automatizados + staging deployment',
+        'Datos de ejemplo validados y listos',
+        'Entorno de pruebas disponible y estable',
+        'Conexiones a sistemas de origen revisadas',
+        'Riesgos, supuestos y responsables definidos',
+        'Guia visual a través de mockups proporcionados por el cliente',
+        'Agenda de demos y seguimientos acordada',
       ],
     },
     {
-      title: 'Fase 2 — Heurística y Evidencias',
+      title: 'Sprint 1 — Plan y esquema',
       duration: '2 semanas',
       description:
-        'Matching semántico avanzado, evidencias operativas y auditoría completa',
+        'Definimos alcance, reglas simples y pantallas base para demo.',
       deliverables: [
-        'Matching semántico por metadata/adjuntos',
-        'Evidencias y notas operativas',
-        'Acciones masivas en UI',
-        'Auditoría avanzada en validators y timeline',
-        'Testing E2E y performance (P50/P95)',
-        '✅ Validación con cliente + checkpoint de aprobación',
+        'Alcance y hitos acordados con negocio',
+        'Esquema de datos simple definido',
+        'Reglas iniciales de conciliación documentadas',
+        'Pantallas base para revisión',
+        'Indicadores básicos visibles en la demo',
+        'Primera demo y feedback incorporado',
       ],
     },
     {
-      title: 'Fase 3 — Optimización y Analítica',
+      title: 'Sprint 2 — Emparejar y consultas',
       duration: '2 semanas',
       description:
-        'Dashboards ampliados, auto-sugerencias y hardening para producción',
+        'Probamos emparejar casos reales y afinamos reglas con consultas.',
       deliverables: [
-        'Dashboards Metabase ampliados por períodos',
-        'Auto-sugerencias por servicio y plantillas',
-        'Tuning de colas y SLAs',
-        'Regresión completa de módulos existentes',
-        'V1 completa lista para producción',
-        '✅ Sign-off final + documentación + training',
+        'Emparejamientos por datos y adjuntos reales',
+        'Preguntas y respuestas para casos dudosos',
+        'Historial completo de cambios y revisiones',
+        'Pruebas de punta a punta y velocidad',
+        'Validación con el equipo y punto de control',
+      ],
+    },
+    {
+      title: 'Sprint 3 — Aplicar sin duplicados',
+      duration: '2 semanas',
+      description:
+        'Aplicamos en volumen, evitamos duplicados y cerramos diferencias.',
+      deliverables: [
+        'Paneles ampliados por períodos y servicios',
+        'Sugerencias automáticas y plantillas de acciones',
+        'Ajustes de colas y tiempos de respuesta',
+        'Pruebas completas de lo existente',
+        'Versión inicial lista para uso',
+        'Cierre, documentación y entrenamiento',
       ],
     },
   ],

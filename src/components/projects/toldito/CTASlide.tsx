@@ -9,9 +9,9 @@ interface CTASlideProps {
 const nextSteps = [
   {
     icon: Calendar,
-    title: 'Discovery (1-2 días)',
+    title: 'Planning',
     description:
-      'Análisis de volúmenes, servicios activos, monedas y ventanas operativas',
+      'Análisis de negocio, definición de alcance y preparación para un inicio rápido',
   },
   {
     icon: Rocket,
@@ -124,9 +124,8 @@ export function CTASlide({ className }: CTASlideProps) {
                 ¿Listo para empezar?
               </h2>
               <p className="max-w-2xl mx-auto text-xl leading-relaxed text-gray-300">
-                Agenda una sesión de discovery para validar volúmenes y definir
-                el roadmap exacto. Primera demo funcional en{' '}
-                <span className="font-bold text-yellow-400">2-3 semanas</span>.
+                Recibirás una propuesta personalizada y un plan de proyecto
+                detallado para tu revisión y aprobación.
               </p>
             </div>
           </div>
