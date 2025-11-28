@@ -24,8 +24,8 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
       )}
     >
       {/* Kimani gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-[#8B7355]/10" />
+      <div className="absolute inset-0 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]">
+        <div className="absolute inset-0 bg-linear-to-br from-[#D4AF37]/10 via-transparent to-[#8B7355]/10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.1),transparent_50%)]" />
       </div>
 
@@ -65,12 +65,12 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
             className="mb-12"
           >
             <div className="mb-6 font-serif font-light tracking-wide text-7xl md:text-9xl">
-              <span className="bg-gradient-to-br from-[#D4AF37] to-[#F5F1E8] bg-clip-text text-transparent">
+              <span className="bg-linear-to-br from-[#D4AF37] to-[#F5F1E8] bg-clip-text text-transparent">
                 Kimani Life
               </span>
             </div>
 
-            <div className="h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mb-8 max-w-md mx-auto" />
+            <div className="h-px bg-linear-to-r from-transparent via-[#D4AF37] to-transparent mb-8 max-w-md mx-auto" />
 
             {heroContent.subtitle && (
               <div className="text-2xl md:text-3xl font-light text-[#D4AF37] mb-12 tracking-wide font-serif uppercase">

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Mail, Globe, Heart } from 'lucide-react'
-import { Button } from '../../ui/button'
+import { Heart } from 'lucide-react'
 import { cn } from '../../../lib/utils'
 
 interface CTASlideProps {
@@ -8,11 +7,11 @@ interface CTASlideProps {
   onNext?: () => void
 }
 
-export function CTASlide({ className, onNext }: CTASlideProps) {
+export function CTASlide({ className }: CTASlideProps) {
   return (
     <div
       className={cn(
-        'min-h-screen flex flex-col justify-center py-20 px-8 bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]',
+        'min-h-screen flex flex-col justify-center py-20 px-8 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]',
         className
       )}
     >
@@ -26,18 +25,7 @@ export function CTASlide({ className, onNext }: CTASlideProps) {
             Thank You
           </h1>
 
-          <div className="h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent max-w-md mx-auto mb-12" />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-16"
-        >
-          <p className="text-3xl font-light text-[#F5F1E8]/80 mb-8">
-            Questions?
-          </p>
+          <div className="h-px bg-linear-to-r from-transparent via-[#D4AF37] to-transparent max-w-md mx-auto mb-12" />
         </motion.div>
 
         <motion.div
@@ -47,45 +35,13 @@ export function CTASlide({ className, onNext }: CTASlideProps) {
           className="mb-12"
         >
           <div className="border border-[#D4AF37] p-12 bg-[#D4AF37]/5 backdrop-blur-sm inline-block">
-            <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center">
               <Heart className="w-8 h-8 text-[#D4AF37] mr-3" />
               <span className="text-sm text-[#D4AF37] font-light tracking-widest uppercase">
                 Ready to Begin?
               </span>
             </div>
-            <p className="text-xl font-light text-[#F5F1E8] font-serif">
-              Let's give your club a heart, a memory, and a mind
-            </p>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center"
-        >
-          <Button
-            size="lg"
-            className="text-lg px-12 py-4 h-auto bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-[#0a0a0a] rounded-none shadow-2xl transform hover:scale-105 transition-all duration-300 font-light tracking-wider uppercase"
-            onClick={() => {
-              if (onNext) {
-                onNext()
-              }
-            }}
-          >
-            <Mail className="mr-3 h-5 w-5" />
-            Start the Conversation
-          </Button>
-
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-lg px-12 py-4 h-auto bg-transparent border border-[#D4AF37] hover:bg-[#D4AF37]/10 text-[#D4AF37] rounded-none shadow-2xl transform hover:scale-105 transition-all duration-300 font-light tracking-wider uppercase"
-          >
-            <Globe className="mr-3 h-5 w-5" />
-            Learn More
-          </Button>
         </motion.div>
 
         {/* Subtle animation elements */}

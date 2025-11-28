@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Coins, Users, Globe, TrendingUp } from 'lucide-react'
+import { Coins, Globe, TrendingUp } from 'lucide-react'
 import { cn } from '../../../lib/utils'
 
 interface KlifeTokenSlideProps {
@@ -51,12 +51,12 @@ export function KlifeTokenSlide({ className }: KlifeTokenSlideProps) {
   return (
     <div
       className={cn(
-        'min-h-screen flex flex-col justify-center py-20 px-8 bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]',
+        'min-h-screen flex flex-col justify-center py-20 px-8 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]',
         className
       )}
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* KLIFE Token Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -70,9 +70,9 @@ export function KlifeTokenSlide({ className }: KlifeTokenSlideProps) {
               The Ledger of Contribution
             </h3>
 
-            <div className="h-px bg-gradient-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent mb-8" />
+            <div className="h-px bg-linear-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent mb-8" />
 
-            <div className="space-y-6 mb-8">
+            <div className="mb-8 space-y-6">
               {tokenFeatures.map((feature, index) => (
                 <motion.div
                   key={feature.title}
@@ -81,7 +81,7 @@ export function KlifeTokenSlide({ className }: KlifeTokenSlideProps) {
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                  <div className="flex items-center justify-center w-8 h-8 shrink-0">
                     <feature.icon className="w-6 h-6 text-[#D4AF37]" />
                   </div>
                   <div>
@@ -118,7 +118,7 @@ export function KlifeTokenSlide({ className }: KlifeTokenSlideProps) {
               Rollout Phases
             </h2>
 
-            <div className="h-px bg-gradient-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent mb-12" />
+            <div className="h-px bg-linear-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent mb-12" />
 
             <div className="space-y-8">
               {phases.map((phase, index) => (

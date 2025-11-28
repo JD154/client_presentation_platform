@@ -39,24 +39,24 @@ export function ValuePropositionSlide({
   return (
     <div
       className={cn(
-        'min-h-screen flex flex-col justify-center py-20 px-8 bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]',
+        'min-h-screen flex flex-col justify-center py-20 px-8 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]',
         className
       )}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="mb-20 text-center"
         >
           <h1 className="text-5xl md:text-6xl font-light text-[#F5F1E8] font-serif tracking-wide mb-6 uppercase">
             The Three Organs of Kimani
           </h1>
-          <div className="h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent max-w-md mx-auto" />
+          <div className="h-px bg-linear-to-r from-transparent via-[#D4AF37] to-transparent max-w-md mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {organs.map((organ, index) => (
             <motion.div
               key={organ.title}
@@ -66,7 +66,7 @@ export function ValuePropositionSlide({
               className="group"
             >
               <div className="border border-[#D4AF37]/30 p-8 bg-[#2a2a2a]/50 backdrop-blur-sm transition-all duration-500 hover:border-[#D4AF37] hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#D4AF37]/20">
-                <div className="text-center mb-6">
+                <div className="mb-6 text-center">
                   <organ.icon className="w-16 h-16 text-[#D4AF37] mx-auto mb-4 transition-transform duration-300 group-hover:scale-110" />
                   <h3 className="text-2xl font-light text-[#F5F1E8] font-serif uppercase tracking-wider mb-2">
                     {organ.title}
@@ -76,7 +76,7 @@ export function ValuePropositionSlide({
                   </div>
                 </div>
 
-                <div className="h-px bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent mb-6" />
+                <div className="h-px bg-linear-to-r from-transparent via-[#D4AF37]/50 to-transparent mb-6" />
 
                 <p className="text-[#F5F1E8] font-light leading-relaxed mb-6 text-center">
                   {organ.description}
@@ -99,7 +99,7 @@ export function ValuePropositionSlide({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16"
+          className="mt-16 text-center"
         >
           <div className="border border-[#D4AF37] p-8 bg-[#D4AF37]/5 backdrop-blur-sm max-w-4xl mx-auto">
             <p className="text-xl text-[#F5F1E8] font-light italic">

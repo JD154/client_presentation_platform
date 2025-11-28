@@ -39,7 +39,7 @@ export function renderSlide(slide: Slide, goToNext?: () => void) {
           return (
             <div
               key={slide.id}
-              className="h-full flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]"
+              className="h-full flex items-center justify-center bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]"
             >
               <div className="text-center">
                 <h2 className="text-3xl font-light text-[#F5F1E8] font-serif mb-4">
@@ -57,7 +57,7 @@ export function renderSlide(slide: Slide, goToNext?: () => void) {
       return (
         <div
           key={slide.id}
-          className="h-full flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]"
+          className="h-full flex items-center justify-center bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]"
         >
           <div className="text-center">
             <h2 className="text-3xl font-light text-[#F5F1E8] font-serif mb-4">

@@ -34,12 +34,12 @@ export function OriginStorySlide({ className }: OriginStorySlideProps) {
   return (
     <div
       className={cn(
-        'min-h-screen flex flex-col justify-center py-20 px-8 bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]',
+        'min-h-screen flex flex-col justify-center py-20 px-8 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]',
         className
       )}
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left Column - Journey */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -52,7 +52,7 @@ export function OriginStorySlide({ className }: OriginStorySlideProps) {
               to the World
             </h1>
 
-            <div className="h-px bg-gradient-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent mb-12" />
+            <div className="h-px bg-linear-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent mb-12" />
 
             <div className="space-y-8">
               {journey.map((item, index) => (
@@ -64,7 +64,7 @@ export function OriginStorySlide({ className }: OriginStorySlideProps) {
                   className="group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-[#D4AF37]/30 bg-[#D4AF37]/10 group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
+                    <div className="shrink-0 w-12 h-12 flex items-center justify-center border border-[#D4AF37]/30 bg-[#D4AF37]/10 group-hover:bg-[#D4AF37]/20 transition-colors duration-300">
                       <item.icon className="w-6 h-6 text-[#D4AF37]" />
                     </div>
                     <div className="flex-1">
@@ -93,7 +93,7 @@ export function OriginStorySlide({ className }: OriginStorySlideProps) {
           >
             <div className="relative">
               {/* Decorative elements */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-[#D4AF37]/10 to-transparent rounded-lg blur-xl" />
+              <div className="absolute -inset-4 bg-linear-to-br from-[#D4AF37]/10 to-transparent rounded-lg blur-xl" />
 
               <div className="relative border border-[#D4AF37] p-12 bg-[#2a2a2a]/80 backdrop-blur-sm">
                 <div className="text-center">

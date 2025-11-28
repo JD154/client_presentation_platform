@@ -38,24 +38,24 @@ export function PartnershipSlide({ className }: PartnershipSlideProps) {
   return (
     <div
       className={cn(
-        'min-h-screen flex flex-col justify-center py-20 px-8 bg-gradient-to-br from-[#0a0a0a] to-[#2a2a2a]',
+        'min-h-screen flex flex-col justify-center py-20 px-8 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]',
         className
       )}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
           <h1 className="text-5xl md:text-6xl font-light text-[#F5F1E8] font-serif tracking-wide mb-6 uppercase">
             Ownership & Partnership
           </h1>
-          <div className="h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent max-w-md mx-auto" />
+          <div className="h-px bg-linear-to-r from-transparent via-[#D4AF37] to-transparent max-w-md mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+        <div className="grid grid-cols-1 gap-16 mb-16 lg:grid-cols-2">
           {/* Amir / Kimani Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -75,7 +75,7 @@ export function PartnershipSlide({ className }: PartnershipSlideProps) {
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                  <div className="flex items-center justify-center w-8 h-8 shrink-0">
                     <item.icon className="w-6 h-6 text-[#D4AF37]" />
                   </div>
                   <div>
@@ -110,7 +110,7 @@ export function PartnershipSlide({ className }: PartnershipSlideProps) {
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
+                  <div className="flex items-center justify-center w-8 h-8 shrink-0">
                     <item.icon className="w-6 h-6 text-[#D4AF37]" />
                   </div>
                   <div>
@@ -132,7 +132,7 @@ export function PartnershipSlide({ className }: PartnershipSlideProps) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center max-w-5xl mx-auto"
+          className="max-w-5xl mx-auto text-center"
         >
           <div className="border border-[#D4AF37] p-12 bg-[#D4AF37]/5 backdrop-blur-sm">
             <blockquote className="text-2xl font-light text-[#F5F1E8] font-serif italic leading-relaxed">
