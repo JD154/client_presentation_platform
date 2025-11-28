@@ -22,6 +22,18 @@ const clients: Client[] = [
     description:
       'Financial technology solutions focusing on reconciliation and ledger management',
   },
+  {
+    id: 'ab',
+    name: 'Amir Benesh',
+    colors: {
+      primary: '#D4AF37',
+      secondary: '#F5F1E8',
+      accent: '#8B7355',
+      background: '#0a0a0a',
+    },
+    description:
+      'Visionary entrepreneur building exclusive community platforms where generosity defines access and AI enhances human connection',
+  },
 ]
 
 export function getAllClients(): Client[] {
