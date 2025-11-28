@@ -1,10 +1,12 @@
 import type { Presentation, Slide } from '../../types'
 import { floPresentation } from './flo'
 import { tolditoPresentation } from './toldito'
+import { kimaniPresentation } from './kimani'
 
 // Import project-specific renderers
 import { renderSlide as renderFloSlide } from '../../../components/projects/flo'
 import { renderSlide as renderTolditoSlide } from '../../../components/projects/toldito'
+import { renderSlide as renderKimaniSlide } from '../../../components/projects/kimani/presenter'
 
 /**
  * Presentation data registry
@@ -13,6 +15,7 @@ import { renderSlide as renderTolditoSlide } from '../../../components/projects/
 const presentationRegistry: Record<string, Presentation> = {
   flo: floPresentation,
   toldito: tolditoPresentation,
+  kimani: kimaniPresentation,
 }
 
 /**
@@ -25,6 +28,7 @@ const rendererRegistry: Record<string, SlideRenderer> = {
   flo: renderFloSlide,
   'ai-assistant': renderFloSlide, // Reusing FLO renderer for ai-assistant
   toldito: renderTolditoSlide,
+  kimani: renderKimaniSlide,
 }
 
 /**

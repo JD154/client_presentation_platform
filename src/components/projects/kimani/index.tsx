@@ -1,0 +1,6 @@
+export { HeroSlide } from './HeroSlide'
+export { OriginStorySlide } from './OriginStorySlide'
+export { ValuePropositionSlide } from './ValuePropositionSlide'
+export { KlifeTokenSlide } from './KlifeTokenSlide'
+export { PartnershipSlide } from './PartnershipSlide'
+export { CTASlide } from './CTASlide'

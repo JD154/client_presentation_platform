@@ -31,6 +31,26 @@ const projects: Project[] = [
     updatedAt: '2025-11-14T00:00:00Z',
     tags: ['FinTech', 'Reconciliation', 'Ledger', 'Audit', 'BullMQ', 'Hasura'],
   },
+  {
+    id: 'kimani',
+    clientId: 'ab',
+    name: 'Kimani — Heart, Memory & Mind',
+    description:
+      'Revolutionary members club platform that transforms community building through AI-powered concierge services, intelligent memory systems, and contribution-based membership where generosity defines access',
+    status: 'active',
+    createdAt: '2025-11-28T00:00:00Z',
+    updatedAt: '2025-11-28T00:00:00Z',
+    tags: [
+      'Community',
+      'AI',
+      'Concierge',
+      'CRM',
+      'Blockchain',
+      'Members Club',
+      'Hospitality',
+      'KLIFE Token',
+    ],
+  },
 ]
 
 export function getAllProjects(): Project[] {
