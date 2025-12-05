@@ -11,7 +11,7 @@ interface HeroSlideProps {
 const heroContent = {
   subtitle: 'Clear Reporting Baseline for Profitability Insights',
   description:
-    'Set up a simple reporting baseline that shows in plain terms, profitability from job execution to bill to invoicing and billing.',
+    'Set up a simple reporting baseline that shows, in plain terms, profitability from job execution to billing and invoicing.',
   ctaText: 'See The Vision',
 }
 
