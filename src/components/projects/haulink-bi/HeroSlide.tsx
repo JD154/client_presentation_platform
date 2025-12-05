@@ -11,7 +11,7 @@ interface HeroSlideProps {
 const heroContent = {
   subtitle: 'Clear Reporting Baseline for Profitability Insights',
   description:
-    'Set up a simple reporting baseline that shows, in plain terms, where and why profitability changes from job execution to billing and payment. One platform, one truth.',
+    'Set up a simple reporting baseline that shows in plain terms, profitability from job execution to bill to invoicing and billing.',
   ctaText: 'See The Vision',
 }
 
@@ -59,7 +59,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
+      <div className="relative z-10 px-8 mx-auto text-center max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
           >
             <div className="flex items-center justify-center mb-8">
               <TrendingUp className="w-16 h-16 text-[#00FF00] mr-4" />
-              <div className="text-7xl md:text-9xl font-black tracking-tight">
+              <div className="font-black tracking-tight text-7xl md:text-9xl">
                 <span className="text-black">Haulink</span>
                 <span className="text-[#00FF00] ml-4">BI</span>
               </div>
@@ -83,7 +83,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
             <div className="h-0.5 bg-linear-to-r from-transparent via-[#00FF00] to-transparent max-w-2xl mx-auto mb-8" />
 
             {heroContent.subtitle && (
-              <div className="text-2xl md:text-3xl font-medium text-gray-800 tracking-wide uppercase">
+              <div className="text-2xl font-medium tracking-wide text-gray-800 uppercase md:text-3xl">
                 {heroContent.subtitle}
               </div>
             )}
@@ -93,7 +93,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-xl md:text-2xl text-gray-800 max-w-4xl mx-auto leading-relaxed mb-12"
+            className="max-w-4xl mx-auto mb-12 text-xl leading-relaxed text-gray-800 md:text-2xl"
           >
             {heroContent.description}
           </motion.div>
@@ -125,7 +125,7 @@ export function HeroSlide({ className, onNext }: HeroSlideProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.3 }}
-            className="mt-16 text-sm text-gray-600 uppercase tracking-widest"
+            className="mt-16 text-sm tracking-widest text-gray-600 uppercase"
           >
             Hauling simplified. Insights clarified.
           </motion.div>
