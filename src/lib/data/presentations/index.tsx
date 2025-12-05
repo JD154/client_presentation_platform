@@ -2,11 +2,13 @@ import type { Presentation, Slide } from '../../types'
 import { floPresentation } from './flo'
 import { tolditoPresentation } from './toldito'
 import { kimaniPresentation } from './kimani'
+import { haulinkBiPresentation } from './haulink-bi'
 
 // Import project-specific renderers
 import { renderSlide as renderFloSlide } from '../../../components/projects/flo'
 import { renderSlide as renderTolditoSlide } from '../../../components/projects/toldito'
 import { renderSlide as renderKimaniSlide } from '../../../components/projects/kimani/presenter'
+import { renderSlide as renderHaulinkBiSlide } from '../../../components/projects/haulink-bi'
 
 /**
  * Presentation data registry
@@ -16,6 +18,7 @@ const presentationRegistry: Record<string, Presentation> = {
   flo: floPresentation,
   toldito: tolditoPresentation,
   kimani: kimaniPresentation,
+  'haulink-bi': haulinkBiPresentation,
 }
 
 /**
@@ -29,6 +32,7 @@ const rendererRegistry: Record<string, SlideRenderer> = {
   'ai-assistant': renderFloSlide, // Reusing FLO renderer for ai-assistant
   toldito: renderTolditoSlide,
   kimani: renderKimaniSlide,
+  'haulink-bi': renderHaulinkBiSlide,
 }
 
 /**

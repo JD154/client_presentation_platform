@@ -34,6 +34,18 @@ const clients: Client[] = [
     description:
       'Visionary entrepreneur building exclusive community platforms where generosity defines access and AI enhances human connection',
   },
+  {
+    id: 'gb',
+    name: 'Gay Burke',
+    colors: {
+      primary: '#00FF00',
+      secondary: '#F5F5F5',
+      accent: '#FF0000',
+      background: '#1A1A1A',
+    },
+    description:
+      'Transportation technology solutions focused on simplifying hauling operations and business intelligence',
+  },
 ]
 
 export function getAllClients(): Client[] {
