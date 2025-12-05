@@ -51,6 +51,24 @@ const projects: Project[] = [
       'KLIFE Token',
     ],
   },
+  {
+    id: 'haulink-bi',
+    clientId: 'gb',
+    name: 'Haulink BI Benchmark',
+    description:
+      'Business Intelligence baseline setup connecting finance systems with operations data for clear profitability reporting and reconciliation',
+    status: 'active',
+    createdAt: '2025-12-05T00:00:00Z',
+    updatedAt: '2025-12-05T00:00:00Z',
+    tags: [
+      'Business Intelligence',
+      'QuickBooks',
+      'Reporting',
+      'Dashboards',
+      'Reconciliation',
+      'Data Integration',
+    ],
+  },
 ]
 
 export function getAllProjects(): Project[] {
