@@ -24,7 +24,7 @@ const scopeContent = {
     {
       title: 'Executive Dashboards',
       description:
-        '3–5 dashboards showing profitability shifts, asset performance, and reconciliation views',
+        'Dashboards showing profitability shifts, asset performance, and reconciliation views',
       category: 'Reporting',
     },
     {
@@ -39,7 +39,7 @@ const scopeContent = {
     'Automatic data updates configured',
     'Clean, organized data from both systems',
     'Combined reconciliation views',
-    '3–5 executive dashboards',
+    'Eexecutive dashboards',
     'Visual data map and documentation',
   ],
   acceptance: [
@@ -158,7 +158,7 @@ export function ScopeSlide() {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="p-6 border bg-white/80 backdrop-blur-sm border-gray-200 rounded-lg"
+          className="p-6 border border-gray-200 rounded-lg bg-white/80 backdrop-blur-sm"
         >
           <h3 className="flex items-center mb-4 text-xl font-bold text-black">
             <CheckCircle2 className="w-5 h-5 mr-3 text-[#00FF00]" />
@@ -179,7 +179,7 @@ export function ScopeSlide() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          className="p-6 border bg-white/80 backdrop-blur-sm border-gray-200 rounded-lg"
+          className="p-6 border border-gray-200 rounded-lg bg-white/80 backdrop-blur-sm"
         >
           <h3 className="flex items-center mb-4 text-xl font-bold text-black">
             <Presentation className="w-5 h-5 mr-3 text-[#00FF00]" />
@@ -203,8 +203,10 @@ export function ScopeSlide() {
         transition={{ duration: 0.6, delay: 1.6 }}
         className="relative z-10 p-6 mt-6 text-center border bg-[#00FF00]/10 backdrop-blur-sm border-[#00FF00]/30 rounded-lg"
       >
-        <div className="text-5xl font-black text-[#00FF00] mb-2">3–5 Days</div>
-        <div className="text-sm font-medium text-gray-700 uppercase tracking-wider">
+        <div className="text-2xl font-black text-[#00FF00] mb-2">
+          5–8 days (small pod) or 3–4 weeks (1 developer)
+        </div>
+        <div className="text-sm font-medium tracking-wider text-gray-700 uppercase">
           After access and approval
         </div>
       </motion.div>

@@ -36,7 +36,7 @@ const valuePropositionContent = {
     {
       title: 'Executive Ready',
       description:
-        '3–5 dashboards with visual maps showing exactly where each number comes from',
+        'Dashboards with visual maps showing exactly where each number comes from',
       icon: 'bar-chart',
       highlight: 'Instant Insights',
     },
