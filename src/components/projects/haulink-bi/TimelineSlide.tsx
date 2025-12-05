@@ -4,7 +4,7 @@ import { Calendar, CheckCircle2, AlertCircle, PlayCircle } from 'lucide-react'
 const timelineContent = {
   phases: [
     {
-      day: 'Day 1',
+      day: 'Phase 1',
       title: 'Approve & Provision',
       description:
         'Confirm environment and access. Share test plan for sign-off (and CRD if required)',
@@ -16,7 +16,7 @@ const timelineContent = {
       ],
     },
     {
-      day: 'Days 2-3',
+      day: 'Phase 2',
       title: 'Build & Validate',
       description:
         'Recreate proof-of-concept in your environment, turn on automatic updates, run matching checks',
@@ -29,7 +29,7 @@ const timelineContent = {
       ],
     },
     {
-      day: 'Days 4-5',
+      day: 'Phase 3',
       title: 'Finalize & Demo',
       description:
         'Finalize dashboards, share acceptance notes, prepare guided demo',
@@ -42,7 +42,7 @@ const timelineContent = {
       ],
     },
   ],
-  note: '3–5 business days after we have access and you approve the plan',
+  note: '3 phases after we have access and you approve the plan',
 }
 
 const statusConfig = {
@@ -67,7 +67,7 @@ const statusConfig = {
 }
 
 export function TimelineSlide() {
-  const title = 'Implementation Timeline'
+  const title = 'Implementation Phases'
   const content = timelineContent
 
   return (
@@ -119,7 +119,7 @@ export function TimelineSlide() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
-                className="flex gap-6 items-start group"
+                className="flex items-start gap-6 group"
               >
                 {/* Timeline indicator */}
                 <div className="flex flex-col items-center">
@@ -160,7 +160,7 @@ export function TimelineSlide() {
 
                     {/* Deliverables */}
                     <div>
-                      <h4 className="mb-3 text-sm font-bold text-gray-400 uppercase tracking-wider">
+                      <h4 className="mb-3 text-sm font-bold tracking-wider text-gray-400 uppercase">
                         Key Deliverables
                       </h4>
                       <div className="grid gap-2">
@@ -200,21 +200,21 @@ export function TimelineSlide() {
         <div className="flex items-center justify-center gap-8">
           <div>
             <div className="text-4xl font-black text-[#00FF00]">Fast</div>
-            <div className="text-xs text-gray-800 uppercase tracking-wider">
+            <div className="text-xs tracking-wider text-gray-800 uppercase">
               Delivery
             </div>
           </div>
           <div className="w-px h-12 bg-[#00FF00]/30" />
           <div>
             <div className="text-4xl font-black text-[#00FF00]">Safe</div>
-            <div className="text-xs text-gray-800 uppercase tracking-wider">
+            <div className="text-xs tracking-wider text-gray-800 uppercase">
               Test Environment
             </div>
           </div>
           <div className="w-px h-12 bg-[#00FF00]/30" />
           <div>
             <div className="text-4xl font-black text-[#00FF00]">Clear</div>
-            <div className="text-xs text-gray-800 uppercase tracking-wider">
+            <div className="text-xs tracking-wider text-gray-800 uppercase">
               Acceptance Criteria
             </div>
           </div>

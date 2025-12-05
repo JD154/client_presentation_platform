@@ -21,6 +21,12 @@ export const haulinkBiPresentation: Presentation = {
       animation: 'fade-in',
     },
     {
+      id: 'architecture',
+      type: 'architecture',
+      title: 'Data Integration Architecture',
+      animation: 'slide-in-up',
+    },
+    {
       id: 'value-proposition',
       type: 'value-proposition',
       title: 'One Truth, Two Systems',
@@ -33,15 +39,9 @@ export const haulinkBiPresentation: Presentation = {
       animation: 'slide-in-right',
     },
     {
-      id: 'architecture',
-      type: 'architecture',
-      title: 'Data Integration Architecture',
-      animation: 'slide-in-up',
-    },
-    {
       id: 'timeline',
       type: 'timeline',
-      title: 'Implementation Timeline',
+      title: 'Implementation Phases',
       animation: 'slide-in-right',
     },
     {
