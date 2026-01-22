@@ -2,12 +2,14 @@ import type { Presentation, Slide } from '../../types'
 import { floPresentation } from './flo'
 import { tolditoPresentation } from './toldito'
 import { kimaniPresentation } from './kimani'
+import { kimani2025ReviewPresentation } from './kimani-2025-review'
 import { haulinkBiPresentation } from './haulink-bi'
 
 // Import project-specific renderers
 import { renderSlide as renderFloSlide } from '../../../components/projects/flo'
 import { renderSlide as renderTolditoSlide } from '../../../components/projects/toldito'
 import { renderSlide as renderKimaniSlide } from '../../../components/projects/kimani/presenter'
+import { renderSlide as renderKimani2025ReviewSlide } from '../../../components/projects/kimani-2025-review/presenter'
 import { renderSlide as renderHaulinkBiSlide } from '../../../components/projects/haulink-bi'
 
 /**
@@ -18,6 +20,7 @@ const presentationRegistry: Record<string, Presentation> = {
   flo: floPresentation,
   toldito: tolditoPresentation,
   kimani: kimaniPresentation,
+  'kimani-2025-review': kimani2025ReviewPresentation,
   'haulink-bi': haulinkBiPresentation,
 }
 
@@ -31,6 +34,7 @@ const rendererRegistry: Record<string, SlideRenderer> = {
   flo: renderFloSlide,
   'ai-assistant': renderFloSlide, // Reusing FLO renderer for ai-assistant
   toldito: renderTolditoSlide,
+  'kimani-2025-review': renderKimani2025ReviewSlide,
   kimani: renderKimaniSlide,
   'haulink-bi': renderHaulinkBiSlide,
 }
@@ -54,11 +58,11 @@ export function getSlideRenderer(projectId: string): SlideRenderer | undefined {
  */
 export async function loadPresentationData(
   clientId: string,
-  projectId: string
+  projectId: string,
 ): Promise<Presentation | null> {
   try {
     const response = await fetch(
-      `/data/clients/${clientId}/projects/${projectId}/content.json`
+      `/data/clients/${clientId}/projects/${projectId}/content.json`,
     )
     if (response.ok) {
       return await response.json()
@@ -76,7 +80,7 @@ export async function loadPresentationData(
  */
 export function defaultSlideRenderer(
   slide: Slide,
-  _goToNext?: () => void
+  _goToNext?: () => void,
 ): React.ReactNode {
   return (
     <div
