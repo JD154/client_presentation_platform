@@ -33,7 +33,7 @@ export const kimani2025ReviewPresentation: Presentation = {
       title: 'Executive Synthesis',
       animation: 'fade-in',
     },
-    {
+    /* {
       id: 'trust-and-access',
       type: 'custom',
       title: '1. Trust & Access',
@@ -44,7 +44,7 @@ export const kimani2025ReviewPresentation: Presentation = {
       type: 'custom',
       title: '2. Welcome & Narrative Loops',
       animation: 'slide-in-right',
-    },
+    }, */
     {
       id: 'concierge-direction',
       type: 'custom',
