@@ -42,22 +42,23 @@ export function FutureUnlocksSlide({ className }: FutureUnlocksSlideProps) {
           >
             <div>
               <h3 className="text-2xl font-light text-[#D4AF37] mb-4">
-                KLIFE Token Utility
+                KLIFE Token Infrastructure
               </h3>
               <p className="text-[#F5F1E8]/80 font-light leading-relaxed">
-                The groundwork for provenance and admin control exists. Next is
-                activation—giving the token meaning within the ecosystem.
+                Admin controls, traceability, and token management foundations
+                are in place. The technical infrastructure is ready for
+                activation—deployment becomes execution, not engineering.
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-light text-[#D4AF37] mb-4">
-                Contribution-Based Scaling
+                Sustainable Scaling Path
               </h3>
               <p className="text-[#F5F1E8]/80 font-light leading-relaxed">
-                With trust and access stabilized, member contribution can become
-                visible. Access can be earned, not gated, allowing reciprocity
-                to be measured.
+                With authentication, onboarding, and core UX stabilized, the
+                platform can scale without compromising member experience.
+                Growth becomes a capacity decision, not a technical barrier.
               </p>
             </div>
           </motion.div>

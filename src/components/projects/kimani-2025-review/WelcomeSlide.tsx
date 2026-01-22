@@ -51,18 +51,17 @@ export function WelcomeSlide({ className }: WelcomeSlideProps) {
 
             <div className="space-y-6 text-[#F5F1E8]/80 text-lg font-light">
               <p>
-                The "Privileged Concierge" and welcome flows were executed with
-                narrative intent. Welcome messages (video + text automation) and
-                integrated push notifications ensure members feel welcomed
-                before they are managed.
+                Welcome flows, push notification integration, and automated
+                messaging were shipped with intentional sequencing. Each
+                touchpoint was designed to ensure members feel welcomed, not
+                just inform.
               </p>
 
               <div className="h-px bg-linear-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent my-6" />
 
               <p className="italic">
-                Kimani's first interaction is a{' '}
-                <span className="text-[#D4AF37]">cultural handshake</span>, not
-                a feature tour. Retention here is emotional, not mechanical.
+                Strategic focus: First impressions drive retention. This
+                separates Kimani from transactional platforms.
               </p>
             </div>
           </motion.div>

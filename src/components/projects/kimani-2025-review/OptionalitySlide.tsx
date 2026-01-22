@@ -50,28 +50,30 @@ export function OptionalitySlide({ className }: OptionalitySlideProps) {
 
             <div className="space-y-6 text-[#F5F1E8]/80 text-lg font-light">
               <p>
-                53 tasks remain pending, with many intentionally in Backlog or
-                Unassigned. This is not execution debt—it is{' '}
-                <span className="text-[#D4AF37]">optionality preservation</span>
+                53 tasks remain pending, with many intentionally in Backlog.
+                This is not execution debt—it is{' '}
+                <span className="text-[#D4AF37]">strategic prioritization</span>
                 .
               </p>
 
               <ul className="space-y-4 list-none">
                 <li className="flex items-start">
                   <span className="text-[#D4AF37] mr-3">•</span>
-                  <span>Kimani resisted premature commitment.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#D4AF37] mr-3">•</span>
                   <span>
-                    Capacity was protected for higher-order experiential work.
+                    Ideas captured without forcing premature execution.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#D4AF37] mr-3">•</span>
                   <span>
-                    In a luxury context, not everything worthy should move
-                    immediately.
+                    Team capacity protected for high-impact foundational work.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-[#D4AF37] mr-3">•</span>
+                  <span>
+                    Disciplined roadmap management: not everything moves at
+                    once.
                   </span>
                 </li>
               </ul>

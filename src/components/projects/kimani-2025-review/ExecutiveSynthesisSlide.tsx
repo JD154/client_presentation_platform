@@ -69,8 +69,8 @@ export function ExecutiveSynthesisSlide({
           className="mt-12 text-center"
         >
           <p className="text-lg font-light italic text-[#D4AF37]/80 max-w-4xl mx-auto">
-            Signal: Execution focused on trust, stability, and experiential
-            foundations before acceleration.
+            Strategic Signal: Foundation-first execution. Build trust and
+            stability before scale.
           </p>
         </motion.div>
       </div>

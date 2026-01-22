@@ -16,8 +16,8 @@ export function TrustAndAccessSlide({ className }: TrustAndAccessSlideProps) {
     >
       <div className="absolute inset-0 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 px-8 py-16 mx-auto max-w-7xl">
+        <div className="grid items-center grid-cols-1 gap-16 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -48,18 +48,16 @@ export function TrustAndAccessSlide({ className }: TrustAndAccessSlideProps) {
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#D4AF37] mr-3">•</span>
-                  <span>
-                    Stable access is prerequisite to generosity mechanics.
-                  </span>
+                  <span>Stable access enables everything that follows.</span>
                 </li>
               </ul>
 
               <div className="h-px bg-linear-to-r from-[#D4AF37] via-[#D4AF37]/50 to-transparent my-6" />
 
               <p>
-                These were treated correctly as{' '}
+                Strategic decision: Treat these as{' '}
                 <span className="text-[#D4AF37]">product constraints</span>, not
-                background plumbing.
+                background plumbing. Build trust before scale.
               </p>
             </div>
           </motion.div>

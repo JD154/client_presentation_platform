@@ -29,8 +29,8 @@ export function GuidingQuestionSlide({ className }: GuidingQuestionSlideProps) {
 
           <div className="border-l-2 border-[#D4AF37] pl-12">
             <blockquote className="text-4xl md:text-5xl font-serif italic text-[#F5F1E8] leading-relaxed">
-              Did execution meaningfully elevate member experience, concierge
-              capability, and future generosity mechanics?
+              Did execution build the right foundations, at the right time, with
+              the right strategic intent?
             </blockquote>
           </div>
         </motion.div>
