@@ -96,7 +96,7 @@ export function ExecutiveSynthesisSlide({
             transition={{ duration: 0.6, delay: 0.6 }}
             className="bg-[#1a1a1a] border border-[#D4AF37]/20 p-12 text-center"
           >
-            <div className="text-8xl font-light text-[#D4AF37] mb-6">62%</div>
+            <div className="text-8xl font-light text-[#D4AF37] mb-6">62%*</div>
             <div className="text-sm tracking-[0.2em] text-[#F5F1E8] uppercase">
               Completion Rate
             </div>
@@ -169,6 +169,21 @@ export function ExecutiveSynthesisSlide({
           <p className="text-lg font-light italic text-[#D4AF37]/80 max-w-4xl mx-auto">
             Strategic Signal: Foundation-first execution. Build trust and
             stability before scale.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 2 }}
+          className="mt-16 pt-8 border-t border-[#D4AF37]/20"
+        >
+          <p className="text-xs text-[#F5F1E8]/50 font-light max-w-5xl mx-auto">
+            * Completion rate calculated against total backlog (138 tasks
+            created), not just active sprint tasks. Reflects strategic
+            prioritization—not all tasks require immediate execution. Pending
+            items represent preserved optionality and deliberate holding
+            patterns.
           </p>
         </motion.div>
       </div>
