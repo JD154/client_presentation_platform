@@ -50,9 +50,18 @@ export function ExecutiveSynthesisSlide({
       <div className="absolute inset-0 bg-linear-to-br from-[#0a0a0a] to-[#2a2a2a]" />
 
       <div className="relative z-10 px-8 py-16 mx-auto max-w-7xl">
-        <h2 className="text-5xl font-light text-[#F5F1E8] font-serif mb-8 tracking-wide uppercase">
+        <h2 className="text-5xl font-light text-[#F5F1E8] font-serif mb-4 tracking-wide uppercase">
           Executive Synthesis
         </h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-sm tracking-widest text-[#D4AF37]/70 uppercase mb-8"
+        >
+          ClickUp Implementation Period: March – December 2025
+        </motion.p>
 
         <div className="h-px bg-linear-to-r from-transparent via-[#D4AF37] to-transparent max-w-md mb-20" />
 
