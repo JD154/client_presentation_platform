@@ -52,6 +52,25 @@ const projects: Project[] = [
     ],
   },
   {
+    id: 'kimani-2025-review',
+    clientId: 'ab',
+    name: 'Kimani — 2025 Annual Review',
+    description:
+      'Executive review of 2025 execution and experiential impact for Kimani Workspace. Analyzing how task completion translated into member experience elevation, concierge capability enhancement, and future generosity mechanics preparation.',
+    status: 'active',
+    createdAt: '2026-01-22T00:00:00Z',
+    updatedAt: '2026-01-22T00:00:00Z',
+    tags: [
+      'Annual Review',
+      'Executive Report',
+      'Kimani',
+      '2025',
+      'Performance Analysis',
+      'Strategic Review',
+      'Impact Assessment',
+    ],
+  },
+  {
     id: 'haulink-bi',
     clientId: 'gb',
     name: 'Haulink BI Benchmark',
@@ -85,11 +104,11 @@ export function getClientProjects(clientId: string): Project[] {
 
 export async function loadProjectData(
   clientId: string,
-  projectId: string
+  projectId: string,
 ): Promise<Project | null> {
   try {
     const response = await fetch(
-      `/data/clients/${clientId}/projects/${projectId}/config.json`
+      `/data/clients/${clientId}/projects/${projectId}/config.json`,
     )
     if (response.ok) {
       return await response.json()
